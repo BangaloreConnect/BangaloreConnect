@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 50 Managerial Interview Questions & Best Answers for IT Jobs</title>
+    <meta name="description" content="Prepare for your next hiring manager interview. Find the best answers to common managerial and situational round questions for technical and leadership roles in IT." />
+    <meta name="keywords" content="managerial round questions, hiring manager interview, behavioral interview questions, leadership skills interview, IT job manager round, conflict resolution, project management questions" />
+    <link rel="icon" type="image/png" href="logo.png" sizes="64x64" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+/* --------------------------------------------------------
+| GLOBAL VARIABLES (FOR TEXT COLOR BLACK)
+| -------------------------------------------------------- */
+:root {
+    --primary: #000000; 
+    --primary-dark: #000000;
+    --darker: #1e293b; /* Retain dark background for footer */
+    --lighter: #ffffff;
+    --gray: #000000;
+    --muted: #000000;
+    --page-bg: #ffffff;
+    --content-max-width: 900px;
+    --radius-lg: 12px;
+    --primary-light: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --dark: #000000;
+    --gray-light: #000000;
+    --gray-lighter: #f8fafc;
+    --success: #000000;
+    --gradient: none;
+    --highlight-color: #000000; /* Used for interactive elements */
+}
+
+body {  
+    margin: 0; 
+    font-family: 'Inter','Plus Jakarta Sans',Arial,sans-serif; 
+    background: var(--page-bg); 
+    color: #000000 !important;
+    line-height: 1.75; 
+}
+
+/* Header */
+.logo { color:#000 !important; }
+.logo-title-wrap h1 { color:#000 !important; }
+.tagline { color:#000 !important; }
+
+/* Section */
+.section { padding:100px 0; }
+.section-header { text-align:center; margin-bottom:60px; }
+
+/* Article Titles */
+.article-main-title { 
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:2.5rem;  
+    margin:6px 0 10px;  
+    line-height:1.15;  
+    color:#000 !important;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { color:#000 !important; }
+
+/* Paragraphs */
+p, .footer-desc {
+    text-align:justify !important;
+    margin-bottom:1.5em !important;
+    color:#000 !important;
+}
+
+/* Footer: Background remains dark, text white/light gray for visibility */
+footer {
+    background:var(--darker);
+    color:white !important;
+    padding:30px 0;
+}
+
+.footer-brand .logo { color:white !important; }
+.footer-brand .logo h1 { color:white !important; }
+.footer-desc { color:#eee !important; }
+.footer-links-column h3 { color:white !important; }
+.footer-link { color:#eee !important; }
+.footer-link i { color: #ccc !important; } 
+
+/* --------------------------------------------------------
+| HR Q&A STYLES (NEW)
+| -------------------------------------------------------- */
+
+.qa-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.qa-box {
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--gray-lighter);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+}
+
+.qa-box:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.qa-box details {
+    padding: 0;
+}
+
+.qa-box summary {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff; 
+    color: var(--dark) !important;
+    border-radius: var(--radius-lg);
+    list-style: none; /* Hide default triangle */
+    position: relative;
+    transition: background 0.2s;
+}
+
+/* Custom arrow style */
+.qa-box summary::after {
+    content: '\25B6'; /* Right-pointing triangle */
+    position: absolute;
+    right: 20px;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.qa-box[open] summary {
+    background: #fff; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.qa-box[open] summary::after {
+    content: '\25BC'; /* Down-pointing triangle */
+}
+
+.qa-answer {
+    padding: 15px 20px 20px;
+    border-top: 1px solid #e2e8f0;
+    background: var(--gray-lighter);
+    font-size: 1rem;
+    color: #333 !important;
+    text-align: left !important;
+}
+
+.qa-answer p {
+    margin-bottom: 0 !important;
+    text-align: left !important;
+    color: #333 !important;
+    line-height: 1.6;
+}
+
+/* Category styling */
+.qa-category {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Mobile Responsiveness for Q&A boxes */
+@media (max-width: 640px) {
+    .qa-box summary {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    .qa-answer {
+        padding: 12px 15px 15px;
+    }
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3551205878174657"
+     crossorigin="anonymous"></script>
+     
+</head>
+
+<body>
+    <div id="loader">Loading...</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-title-wrap">
+                    <img src="logo.png" alt="Bangalore Connect Logo" class="logo-img">
+                    <h1>Bangalore Connect</h1>
+                </div>
+                <p class="tagline">Connecting Talent with Opportunities</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="./index.html#jobs" class="nav-link">Jobs</a></li>
+                    <li><a href="./Aboutus.html" class="nav-link">About</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="section" style="padding-bottom: 60px;">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <h1 class="article-main-title">Top Managerial Round Interview Questions and Answers</h1>
+        </div>
+
+        <article style="max-width: var(--content-max-width); margin: 0 auto;">
+            <p style="text-align: center; color: #475569 !important; font-size: 1.05rem; margin-bottom: 30px;">
+                This guide helps you prepare for the Managerial or Hiring Manager interview. This round focuses on your soft skills, leadership, project handling, and how you manage challenging situations. Use these simple and effective answers to show the interviewer you are ready for the role.
+            </p>
+        </article>
+        
+        <div class="qa-container">
+            
+            <div class="qa-box">
+                <details>
+                    <summary>1. Tell me about a time a project failed or missed a major deadline.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Project Management & Accountability</span>
+                        <p>
+                            In a college group project, we badly underestimated the time needed for testing. We finished the code on time but missed the final submission deadline because of major bugs we found late. I learned a huge lesson: planning must include a clear, separate schedule for thorough testing and bug fixing. I now add a 30% buffer to my estimates for unexpected problems.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>2. Describe how you handled a disagreement with a team member.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Conflict Resolution</span>
+                        <p>
+                            Two teammates had a conflict about the best coding approach. One wanted speed, the other wanted clean code. I brought them together and made sure they focused only on the facts of the problem, not their personal preference. We ran a small test to compare both methods, and the data showed the 'clean code' method was faster in the long run. We both agreed to follow the better data-driven approach.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>3. How do you motivate a team member who is struggling or losing interest?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Leadership & Mentoring</span>
+                        <p>
+                            I would speak to them privately to find out the reason for their struggle, maybe they are facing a personal issue or the task is too difficult. Then, I would try two things: first, break their work into smaller, achievable steps so they can feel success quickly. Second, I'd remind them how important their specific task is to the whole project's success.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>4. Tell us about the most difficult decision you had to make recently.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Decision Making</span>
+                        <p>
+                            During my final year project, we had to choose between using a simple, older technology that we knew well or a newer, more complex technology that offered much better performance. It was a tough call because the complex option meant a lot more learning and risk. I chose the newer technology because I realized the performance gain was essential for the project's long-term success. It was difficult but the right choice.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="qa-box">
+                <details>
+                    <summary>5. How do you respond when priorities or project goals suddenly change?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Adaptability & Flexibility</span>
+                        <p> "First, I make sure I fully understand the *new* main goal and why the change happened. Then, I quickly make a list of all current tasks and see which ones are now no longer important. I communicate the new plan clearly to everyone involved, stop the old work, and start focusing the team's effort on the new high-priority tasks immediately."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>6. Describe a time you disagreed with a professor or manager's instruction.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Communication & Professionalism</span>
+                        <p>
+                            I disagreed with my professor's suggested approach for an assignment because I felt it was too slow. Instead of arguing, I politely asked for a few minutes to show him my different idea. I presented my logical reasons and data to support my approach. He listened, agreed my method was better, and allowed me to proceed. I always make sure to discuss differences of opinion respectfully and with facts.
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <div class="qa-box">
+                <details>
+                    <summary>7. What does leadership mean to you, and how have you shown it?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Leadership & Vision</span>
+                        <p>
+                            Leadership means taking responsibility for the team's overall success and helping others grow. I showed this when I led my final year project team. I didn't just assign tasks; I trained my teammates on the specific tool we were using, and I took responsibility for all major project integrations. A good leader supports the team and takes the blame if things go wrong.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>8. Give an example of a time you took initiative without being asked.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Initiative & Proactivity</span>
+                        <p>
+                            In our college coding club, everyone used different tools for sharing code. No one asked me to fix it, but I set up a shared Git repository and wrote a simple guide on how to use it. This made collaboration much easier and helped the club members learn a valuable industry tool for the first time. I look for problems and try to solve them myself.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>9. How do you handle a massive workload or extreme pressure?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Stress Management & Prioritization</span>
+                        <p>
+                            When pressure is high, I first stop and make a clear list of everything that needs to be done. I then talk to my manager to confirm the top one or two most critical items. I focus all my effort on those few items until they are done, ignoring everything else until then. Breaking down the big problem into small steps is how I manage the stress of a massive workload.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <div class="qa-box">
+                <details>
+                    <summary>10. Where do you see yourself professionally in five years?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Career Vision</span>
+                        <p>
+                            In five years, I plan to be a Senior Software Engineer here, recognized for my technical knowledge and reliable delivery on complex projects. I want to have enough experience to start mentoring newer employees, setting clear technical direction for the team, and helping the company grow with innovative solutions. I am looking for a long-term, stable career here.
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">More Situational & Leadership Questions</h3>
+
+            <div class="qa-box"><details><summary>11. How do you manage a situation where you don't have all the technical resources you need?</summary><div class="qa-answer"><span class="qa-category">Category: Resourcefulness</span><p>I focus on finding a suitable open-source or free alternative first. If that fails, I clearly explain the resource gap and its impact to the manager, suggesting a minimum budget to get what is truly essential.</p></div></details></div>
+            <div class="qa-box"><details><summary>12. How do you ensure the quality of your work is high?</summary><div class="qa-answer"><span class="qa-category">Category: Quality Assurance</span><p>I follow clear standards: writing clean, commented code, performing thorough self-testing with different test cases, and asking a teammate to formally review my final work before marking it as complete.</p></div></details></div>
+            <div class="qa-box"><details><summary>13. How do you deal with a customer or user who reports a major issue?</summary><div class="qa-answer"><span class="qa-category">Category: Crisis Communication</span><p>I would listen calmly, confirm the problem, and assure them I am working on it. Then, I would immediately gather the team, find the fix, and provide the user with a realistic time for the solution.</p></div></details></div>
+            <div class="qa-box"><details><summary>14. What are your criteria for a successful project?</summary><div class="qa-answer"><span class="qa-category">Category: Success Definition</span><p>A successful project meets all the user's requirements, is delivered on time, and the code is stable and easy for future developers to maintain and update.</p></div></details></div>
+            <div class="qa-box"><details><summary>15. Tell me about a risk you identified and how you reduced it.</summary><div class="qa-answer"><span class="qa-category">Category: Risk Management</span><p>I identified that a key technical library used in our project was becoming old. I spent a week moving the core functions to a newer, more stable library to prevent future bugs and security issues, reducing a major long-term risk.</p></div></details></div>
+            <div class="qa-box"><details><summary>16. How do you delegate work within a team?</summary><div class="qa-answer"><span class="qa-category">Category: Delegation</span><p>I delegate based on two things: the team member's specific technical strength, and what they need to learn to grow. I never assign tasks I wouldn't do myself, and I provide clear instructions and support.</p></div></details></div>
+            <div class="qa-box"><details><summary>17. What is your process for learning a completely new technology?</summary><div class="qa-answer"><span class="qa-category">Category: Continuous Learning</span><p>I start with the fundamentals through documentation or a good online course. Then, I immediately apply it by building a very small practice project (a proof-of-concept) to get hands-on experience quickly.</p></div></details></div>
+            <div class="qa-box"><details><summary>18. How would you handle a colleague who repeatedly misses small deadlines?</summary><div class="qa-answer"><span class="qa-category">Category: Performance Management</span><p>I would have a kind but firm conversation to understand if the issue is a lack of skill, motivation, or an overload of work. We would then set up more frequent check-ins to monitor progress closely.</p></div></details></div>
+            <div class="qa-box"><details><summary>19. What role do ethics play in software development?</summary><div class="qa-answer"><span class="qa-category">Category: Ethics</span><p>Ethics is about protecting user data, building fair and unbiased systems (especially in AI), and being honest about what your software can and cannot do. It's about being trustworthy.</p></div></details></div>
+            <div class="qa-box"><details><summary>20. What is your biggest learning from a difficult manager/professor?</summary><div class="qa-answer"><span class="qa-category">Category: Learning from Authority</span><p>My most difficult professor taught me the value of extremely precise technical documentation. Although demanding, his high standards made my technical reports and project documents much better.</p></div></details></div>
+
+            <div class="qa-box"><details><summary>21. How do you measure your own success in a new role?</summary><div class="qa-answer"><span class="qa-category">Category: Self-Assessment</span><p>I measure it by two factors: first, completing my initial training and onboarding tasks successfully. Second, contributing to a feature that is deployed to customers within the first three to six months.</p></div></details></div>
+            <div class="qa-box"><details><summary>22. Describe your biggest professional mistake and what you did after.</summary><div class="qa-answer"><span class="qa-category">Category: Learning from Mistakes</span><p>My biggest mistake was coding a feature without properly getting it approved by the team lead. I had to redo the work. I learned the essential lesson of prioritizing communication and planning over jumping straight into execution.</p></div></details></div>
+            <div class="qa-box"><details><summary>23. What excites you the most about this specific industry or product?</summary><div class="qa-answer"><span class="qa-category">Category: Industry Knowledge</span><p>I am most excited about the potential of [mention a specific company product or industry focus, e.g., using secure cloud systems] to solve a real-world problem for a huge number of people in India.</p></div></details></div>
+            <div class="qa-box"><details><summary>24. Do you prefer working on many small tasks or one large, long-term project?</summary><div class="qa-answer"><span class="qa-category">Category: Work Style Preference</span><p>I prefer a balance. I like one large project for deep focus and growth, mixed with small, quick tasks to keep me sharp and ensure I am quickly addressing immediate needs.</p></div></details></div>
+            <div class="qa-box"><details><summary>25. How do you keep yourself organized on a weekly basis?</summary><div class="qa-answer"><span class="qa-category">Category: Organization</span><p>I use a digital to-do list where I track tasks. Every Monday, I plan my top 5 priorities for the week, and every evening, I review what I finished and plan the next day's top 3 tasks.</p></div></details></div>
+            <div class="qa-box"><details><summary>26. What are the signs of a dysfunctional team, and how do you fix it?</summary><div class="qa-answer"><span class="qa-category">Category: Team Health</span><p>Signs are poor communication, blaming others, and a lack of open feedback. I would try to fix it by encouraging more face-to-face (or video) communication and setting up clear team rules for respectful discussion.</p></div></details></div>
+            <div class="qa-box"><details><summary>27. How do you stay focused when working remotely or alone?</summary><div class="qa-answer"><span class="qa-category">Category: Focus & Discipline</span><p>I use the 'Pomodoro Technique' where I work in 45-minute focused bursts with short breaks. I also turn off non-essential notifications to reduce all possible distractions.</p></div></details></div>
+            <div class="qa-box"><details><summary>28. If your task is dependent on another team's work, what do you do?</summary><div class="qa-answer"><span class="qa-category">Category: Inter-Team Coordination</span><p>I communicate clearly with the other team well in advance, explaining what I need and my deadline. If there's a delay, I check with my manager to see if I can work on another high-priority task until the dependency is cleared.</p></div></details></div>
+            <div class="qa-box"><details><summary>29. What is the difference between a leader and a manager?</summary><div class="qa-answer"><span class="qa-category">Category: Leadership vs Management</span><p>A manager assigns tasks and measures results. A leader inspires people, sets the vision, and motivates the team to achieve a common, higher goal. Both are important for a successful company.</p></div></details></div>
+            <div class="qa-box"><details><summary>30. What questions do you have for me (the manager)?</summary><div class="qa-answer"><span class="qa-category">Category: Closing the Interview</span><p>Thank you. 1. What are the key performance indicators (KPIs) for success in this role in the first year? 2. What is the biggest technical challenge your team is currently focused on solving?</p></div></details></div>
+            
+            <div class="qa-box"><details><summary>31. How would you coach a technically skilled but rude colleague?</summary><div class="qa-answer"><span class="qa-category">Category: Behavioral Coaching</span><p>I would focus on the impact of their behavior on team morale and communication, not just their rudeness. I'd explain that teamwork and communication are just as important as technical skill in our company.</p></div></details></div>
+            <div class="qa-box"><details><summary>32. Tell me about a time you helped someone grow their technical skills.</summary><div class="qa-answer"><span class="qa-category">Category: Mentorship</span><p>A junior in my college club was struggling with Python. I spent three lunch breaks with him teaching basic data types and functions. Soon, he could complete his assignments on his own, and I felt great about helping him.</p></div></details></div>
+            <div class="qa-box"><details><summary>33. What is the most important skill for a first-time manager?</summary><div class="qa-answer"><span class="qa-category">Category: Management Insight</span><p>Listening. A good new manager must listen to the team's problems, ideas, and feedback to understand what is truly needed before making any decisions.</p></div></details></div>
+            <div class="qa-box"><details><summary>34. How do you handle failure in your own work?</summary><div class="qa-answer"><span class="qa-category">Category: Resilience</span><p>I take a moment to understand the failure, document what went wrong, fix the problem, and then use the lesson to update my future processes. Failure is a chance to learn, not a reason to stop.</p></div></details></div>
+            <div class="qa-box"><details><summary>35. What is your strategy for communicating bad news to stakeholders or clients?</summary><div class="qa-answer"><span class="qa-category">Category: Communication Strategy</span><p>I communicate bad news clearly and quickly. I immediately state the problem, explain why it happened in simple terms, and most importantly, I present a clear plan of action to fix it.</p></div></details></div>
+            <div class="qa-box"><details><summary>36. How do you ensure that you are continuously improving?</summary><div class="qa-answer"><span class="qa-category">Category: Self-Improvement</span><p>I actively seek feedback, sign up for one new online course or certification every six months, and try to spend 1-2 hours a week reading technical articles on new developments in the field.</p></div></details></div>
+            <div class="qa-box"><details><summary>37. What is your view on work-life balance?</summary><div class="qa-answer"><span class="qa-category">Category: Work-Life Balance</span><p>It's important for long-term productivity. While I am committed to working extra during crunch times, I believe a balanced life leads to better focus and fewer burnouts in the long run.</p></div></details></div>
+            <div class="qa-box"><details><summary>38. If you had to fire someone, how would you handle it?</summary><div class="qa-answer"><span class="qa-category">Category: Difficult Conversations</span><p>I would be professional, private, and direct. I would state the reason clearly, referencing previous warnings or documented performance issues, and treat the person with dignity and respect during the process.</p></div></details></div>
+            <div class="qa-box"><details><summary>39. Tell me about a successful presentation you gave.</summary><div class="qa-answer"><span class="qa-category">Category: Communication Skills</span><p>I successfully presented my final year project to a panel of professors. I made the complex technical parts easy to understand by using simple analogies and clear visual diagrams, and I answered all their questions confidently.</p></div></details></div>
+            <div class="qa-box"><details><summary>40. How do you earn respect from your team?</summary><div class="qa-answer"><span class="qa-category">Category: Team Respect</span><p>By demonstrating competence, working hard, being honest, and treating every team member with fairness. I believe respect is earned through consistent action, not just a job title.</p></div></details></div>
+            <div class="qa-box"><details><summary>41. What is your opinion on micromanagement?</summary><div class="qa-answer"><span class="qa-category">Category: Management Style</span><p>I think micromanagement can be helpful at the beginning for a new joiner. But eventually, a good manager should trust the employee, give clear goals, and only check in occasionally, allowing them to own their work.</p></div></details></div>
+            <div class="qa-box"><details><summary>42. How would you teach a technical concept to a non-technical person?</summary><div class="qa-answer"><span class="qa-category">Category: Simplify Concepts</span><p>I would use a simple, real-world comparison or story (an analogy) instead of technical terms. For example, I'd explain a database by comparing it to an organized library's catalog system.</p></div></details></div>
+            <div class="qa-box"><details><summary>43. What makes you an ideal candidate for a technical/management path?</summary><div class="qa-answer"><span class="qa-category">Category: Career Path</span><p>I have a strong technical base and enjoy solving complex code problems. I also enjoy working with people, helping my teammates, and organizing projects. I believe I have the foundation for both paths.</p></div></details></div>
+            <div class="qa-box"><details><summary>44. Describe your process for making important project estimates.</summary><div class="qa-answer"><span class="qa-category">Category: Estimation</span><p>I break the project into the smallest tasks possible. I estimate each task, add them up, and then apply a risk factor (buffer) for unknown problems. I always consult a senior person before finalizing the estimate.</p></div></details></div>
+            <div class="qa-box"><details><summary>45. What is the most important piece of feedback you've received?</summary><div class="qa-answer"><span class="qa-category">Category: Feedback Loop</span><p>My professor once told me I should slow down and focus on documentation as much as coding. I learned that well-written instructions are just as important as working code for any successful software project.</p></div></details></div>
+            <div class="qa-box"><details><summary>46. How do you handle a tight budget or cost restriction in a project?</summary><div class="qa-answer"><span class="qa-category">Category: Cost Management</span><p>I prioritize features based on what delivers the highest business value first. I would look for efficient, open-source tools instead of expensive commercial options to keep costs down without sacrificing core functionality.</p></div></details></div>
+            <div class="qa-box"><details><summary>47. What motivates you to stay with a company long-term?</summary><div class="qa-answer"><span class="qa-category">Category: Company Loyalty</span><p>Consistent new challenges, a path for technical growth (like certifications and senior roles), and a positive work environment where my contribution is clearly recognized and valued.</p></div></details></div>
+            <div class="qa-box"><details><summary>48. What would you do if your team had a major technical disagreement with another team?</summary><div class="qa-answer"><span class="qa-category">Category: Inter-Team Conflict</span><p>I would set up a meeting with the leads from both teams. I'd make sure the discussion is calm, fact-based, and focused on the technical goal of the company, not on which team is 'right' or 'wrong'.</p></div></details></div>
+            <div class="qa-box"><details><summary>49. How do you handle being temporarily assigned to a project that you find boring?</summary><div class="qa-answer"><span class="qa-category">Category: Attitude & Commitment</span><p>I focus on doing the task with the highest possible quality and efficiency, regardless of how I feel about it. I also look for ways to automate the boring parts to complete the work faster, which is a technical challenge in itself.</p></div></details></div>
+            <div class="qa-box"><details><summary>50. Rate your leadership potential on a scale of 1 to 10.</summary><div class="qa-answer"><span class="qa-category">Category: Self-Rating (Leadership)</span><p>I would rate my potential as a **9 out of 10**. I have successfully led college projects, I am highly responsible, and I enjoy helping others. The remaining point is for the real-world experience I will gain here, which is the final step to becoming a truly strong leader.</p></div></details></div>
+        </div>
+    </div>
+</section>
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo" style="display:flex; align-items:center; gap:10px; color: white;">
+                        <img src="logo.png" alt="Bangalore Connect Logo" style="width:36px; height:36px; object-fit:contain;" />
+                        Bangalore Connect
+                    </a>
+                    <p class="footer-desc" style="text-align: justify;">
+                        Bangalore Connect is your go-to job portal for finding the best jobs in Bangalore. We connect Smart People with top companies, making your career growth easy and efficient. Find verified jobs and move your career forward today.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029VbC3pS63gvWSBbw93I19" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:9019540558" class="social-link"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/company/bangalore-connect/ " class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bang.aloreconnect/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">For Job Seekers</h3>
+                    <ul class="footer-links">
+                        <li><a href="./privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="./faqs.html" class="footer-link"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="./tandc.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms and Conditions</a></li>
+                        <li><a href="./report.html" class="footer-link"><i class="fas fa-chevron-right"></i> Report Problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                     </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script> window.addEventListener('load', () => document.body.classList.add('loaded')); </script>
+</body>
+</html>

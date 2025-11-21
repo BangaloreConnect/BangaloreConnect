@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 Technical Interview Questions for Freshers & Experienced | Bangalore Connect</title>
+    <meta name="description" content="Master the top 100 Technical interview questions for B.E. CSE Freshers and experienced IT professionals. Covers DSA, OOP, DBMS, SQL, and core computer science fundamentals." />
+    <meta name="keywords" content="technical interview questions, CSE freshers, DSA questions, OOP concepts, DBMS SQL interview, Java interview, Python interview, software engineer technical prep" />
+    <link rel="icon" type="image/png" href="logo.png" sizes="64x64" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+/* --------------------------------------------------------
+| GLOBAL VARIABLES (FOR TEXT COLOR BLACK)
+| -------------------------------------------------------- */
+:root {
+    --primary: #000000; 
+    --primary-dark: #000000;
+    --darker: #1e293b; /* Retain dark background for footer */
+    --lighter: #ffffff;
+    --gray: #000000;
+    --muted: #000000;
+    --page-bg: #ffffff;
+    --content-max-width: 900px;
+    --radius-lg: 12px;
+    --primary-light: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --dark: #000000;
+    --gray-light: #000000;
+    --gray-lighter: #f8fafc;
+    --success: #000000;
+    --gradient: none;
+    --highlight-color: #000000; /* Used for interactive elements */
+}
+
+body {  
+    margin: 0;  
+    font-family: 'Inter','Plus Jakarta Sans',Arial,sans-serif;  
+    background: var(--page-bg);  
+    color: #000000 !important;
+    line-height: 1.75;  
+}
+
+/* Header */
+.logo { color:#000 !important; }
+.logo-title-wrap h1 { color:#000 !important; }
+.tagline { color:#000 !important; }
+
+/* Section */
+.section { padding:100px 0; }
+.section-header { text-align:center; margin-bottom:60px; }
+
+/* Article Titles */
+.article-main-title { 
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:2.5rem;  
+    margin:6px 0 10px;  
+    line-height:1.15;  
+    color:#000 !important;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { color:#000 !important; }
+
+/* Paragraphs */
+p, .footer-desc {
+    text-align:justify !important;
+    margin-bottom:1.5em !important;
+    color:#000 !important;
+}
+
+/* Footer: Background remains dark, text white/light gray for visibility */
+footer {
+    background:var(--darker);
+    color:white !important;
+    padding:30px 0;
+}
+
+.footer-brand .logo { color:white !important; }
+.footer-brand .logo h1 { color:white !important; }
+.footer-desc { color:#eee !important; }
+.footer-links-column h3 { color:white !important; }
+.footer-link { color:#eee !important; }
+.footer-link i { color: #ccc !important; } 
+
+/* --------------------------------------------------------
+| TECHNICAL Q&A STYLES (MATCHES HR STYLE)
+| -------------------------------------------------------- */
+
+.qa-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.qa-box {
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--gray-lighter);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+}
+
+.qa-box:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.qa-box details {
+    padding: 0;
+}
+
+.qa-box summary {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff; 
+    color: var(--dark) !important;
+    border-radius: var(--radius-lg);
+    list-style: none; /* Hide default triangle */
+    position: relative;
+    transition: background 0.2s;
+}
+
+/* Custom arrow style */
+.qa-box summary::after {
+    content: '\25B6'; /* Right-pointing triangle */
+    position: absolute;
+    right: 20px;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.qa-box[open] summary {
+    background: #fff; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.qa-box[open] summary::after {
+    content: '\25BC'; /* Down-pointing triangle */
+}
+
+.qa-answer {
+    padding: 15px 20px 20px;
+    border-top: 1px solid #e2e8f0;
+    background: var(--gray-lighter);
+    font-size: 1rem;
+    color: #333 !important;
+    text-align: left !important;
+}
+
+.qa-answer p {
+    margin-bottom: 0 !important;
+    text-align: left !important;
+    color: #333 !important;
+    line-height: 1.6;
+}
+
+/* Category styling */
+.qa-category {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Mobile Responsiveness for Q&A boxes */
+@media (max-width: 640px) {
+    .qa-box summary {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    .qa-answer {
+        padding: 12px 15px 15px;
+    }
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3551205878174657"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="loader">Loading...</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-title-wrap">
+                    <img src="logo.png" alt="Bangalore Connect Logo" class="logo-img">
+                    <h1>Bangalore Connect</h1>
+                </div>
+                <p class="tagline">Connecting Talent with Opportunities</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="./index.html#jobs" class="nav-link">Jobs</a></li>
+                    <li><a href="./Aboutus.html" class="nav-link">About</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="./career.html" class="nav-link">Careers</a></li>
+                    <li><a href="./aptitude-questions.html" class="nav-link">Aptitude</a></li>
+                    <li><a href="./Cse-Projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="./hr-interview-questions.html" class="nav-link">HR Prep</a></li>
+                    <li><a href="./technical-interview-questions.html" class="nav-link">Tech Prep</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="section" style="padding-bottom: 60px;">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <h1 class="article-main-title">Technical Interview Questions: DSA, OOP, DBMS & Web</h1>
+        </div>
+
+        <article style="max-width: var(--content-max-width); margin: 0 auto;">
+            <p style="text-align: center; color: #475569 !important; font-size: 1.05rem; margin-bottom: 30px;">
+              Grow your technical rounds for developer and testing roles. This part has 100 important questions with easy and clear answers on key Computer Science topics. Focus on understanding the main idea, not just memorizing answers.
+            </p>
+        </article>
+        
+        <div class="qa-container">
+            
+            <h2 style="text-align: center; margin-bottom: 20px;">Data Structures & Algorithms (DSA)</h2>
+            
+            <!-- DSA 1 -->
+            <div class="qa-box">
+                <details>
+                    <summary>1. What is a 'Data Structure'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Fundamentals</span>
+                        <p>A Data Structure is a special way of organizing and storing data in a computer so that it can be used efficiently. Examples are arrays, linked lists, and trees.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 2 -->
+            <div class="qa-box">
+                <details>
+                    <summary>2. What is Time Complexity and how is it measured?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Fundamentals</span>
+                        <p>Time Complexity measures how fast an algorithm runs based on the size of the input data. We use **Big O Notation** (like $O(n)$ or $O(n^2)$) to describe this performance in a general way.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 3 -->
+            <div class="qa-box">
+                <details>
+                    <summary>3. Explain the concept of a 'Linked List'.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Structures</span>
+                        <p>A Linked List is a collection of items, where each item (**node**) holds the data and a reference (**pointer**) to the next item. Unlike arrays, items are not stored next to each other in memory.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 4 -->
+            <div class="qa-box">
+                <details>
+                    <summary>4. What is the main difference between a Stack and a Queue?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Structures</span>
+                        <p>A **Stack** is LIFO (**Last-In, First-Out**), like a stack of plates. The last item added is the first one removed. A **Queue** is FIFO (**First-In, First-Out**), like people waiting in a line.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 5 -->
+            <div class="qa-box">
+                <details>
+                    <summary>5. What is a 'Binary Search Tree' (BST)?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Trees</span>
+                        <p>A BST is a special type of tree structure where for every node, all values in its **left** sub-tree are smaller than the node, and all values in its **right** sub-tree are larger. This makes searching very fast.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 6 -->
+            <div class="qa-box">
+                <details>
+                    <summary>6. When would you use a Hashing (Hash Map/Dictionary)?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Hashing</span>
+                        <p>I would use a Hash Map when I need **very fast lookups** (searching, inserting, or deleting data) based on a unique key. It provides near $O(1)$ constant time complexity on average.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DSA 7 -->
+            <div class="qa-box">
+                <details>
+                    <summary>7. Explain Merge Sort briefly.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DSA Algorithms</span>
+                        <p>Merge Sort is a 'Divide and Conquer' algorithm. It keeps dividing the list into smaller halves until each piece has only one element. Then, it repeatedly **merges** the sorted pieces back together to get the final sorted list.</p>
+                    </div>
+                </details>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Object-Oriented Programming (OOP)</h2>
+
+            <!-- OOP 8 -->
+            <div class="qa-box">
+                <details>
+                    <summary>8. What is the fundamental concept of OOP?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Fundamentals</span>
+                        <p>OOP is a programming method that uses **objects** (which are instances of classes) to organize code. It focuses on data and the functions that work on that data, rather than logic and actions alone.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OOP 9 -->
+            <div class="qa-box">
+                <details>
+                    <summary>9. What is a 'Class' vs. an 'Object'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Fundamentals</span>
+                        <p>A **Class** is the blueprint or template (e.g., Car model design). An **Object** is a real-world instance built from that template (e.g., your actual Maruti car). You can create many objects from one class.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OOP 10 -->
+            <div class="qa-box">
+                <details>
+                    <summary>10. Define 'Polymorphism' with a simple example.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Pillars</span>
+                        <p>**Polymorphism** means 'many forms'. Example: The `draw()` method can behave differently when called on a Circle object than when called on a Square object, even though the method name is the same.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OOP 11 -->
+            <div class="qa-box">
+                <details>
+                    <summary>11. What is 'Inheritance' and why is it used?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Pillars</span>
+                        <p>Inheritance is a way for a new class (**Child Class**) to take properties and methods from an existing class (**Parent Class**). It helps us **reuse code** and maintain a clear relationship between different types of objects.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OOP 12 -->
+            <div class="qa-box">
+                <details>
+                    <summary>12. What is 'Encapsulation'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Pillars</span>
+                        <p>Encapsulation means **bundling the data and the methods** that work on that data into one unit (the class). It also means restricting direct access to the data from outside, protecting it from accidental changes.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OOP 13 -->
+            <div class="qa-box">
+                <details>
+                    <summary>13. What is an 'Abstract Class'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OOP Concepts</span>
+                        <p>An Abstract Class is a class that **cannot be used directly** to create objects. It is only used to be inherited by other classes. It often contains abstract methods that the child classes *must* implement.</p>
+                    </div>
+                </details>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Database Management Systems (DBMS & SQL)</h2>
+
+            <!-- DBMS 14 -->
+            <div class="qa-box">
+                <details>
+                    <summary>14. What is a 'Primary Key'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DBMS/SQL Fundamentals</span>
+                        <p>A Primary Key is a column (or set of columns) that **uniquely identifies** every record (row) in a database table. It cannot contain null (empty) values and must be unique.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DBMS 15 -->
+            <div class="qa-box">
+                <details>
+                    <summary>15. What is the difference between DROP, DELETE, and TRUNCATE commands?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">SQL Commands</span>
+                        <p>**DELETE** removes rows and can be rolled back. **TRUNCATE** removes *all* rows fast and cannot be rolled back easily. **DROP** removes the entire table structure from the database.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DBMS 16 -->
+            <div class="qa-box">
+                <details>
+                    <summary>16. Explain 'INNER JOIN' in SQL.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">SQL Joins</span>
+                        <p>An INNER JOIN returns only the rows that have **matching values** in both of the tables being joined. It's the most common type of join used for combining related data.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DBMS 17 -->
+            <div class="qa-box">
+                <details>
+                    <summary>17. What are the ACID properties in transactions?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DBMS Transactions</span>
+                        <p>ACID stands for **Atomicity** (all or nothing), **Consistency** (only valid data is saved), **Isolation** (transactions don't interfere with each other), and **Durability** (changes are permanent). These ensure reliable data processing.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DBMS 18 -->
+            <div class="qa-box">
+                <details>
+                    <summary>18. What is 'Normalization'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DBMS Design</span>
+                        <p>Normalization is a database design technique used to **organize tables efficiently** and reduce data redundancy (avoid repeating data) and improve data integrity.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- DBMS 19 -->
+            <div class="qa-box">
+                <details>
+                    <summary>19. What is a 'Foreign Key'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">DBMS/SQL Fundamentals</span>
+                        <p>A Foreign Key is a column that links two tables together. It points to the **Primary Key** of another table, maintaining the relationship and consistency between the data.</p>
+                    </div>
+                </details>
+            </div>
+
+            <h2 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Web/Networking/OS Fundamentals</h2>
+
+            <!-- WEB 20 -->
+            <div class="qa-box">
+                <details>
+                    <summary>20. What is the difference between HTTP and HTTPS?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Networking/Web</span>
+                        <p>HTTP (**HyperText Transfer Protocol**) is the basic protocol for data transfer on the web. **HTTPS** is the secure version; the 'S' stands for **Secure**, meaning the data is encrypted using SSL/TLS before sending.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- WEB 21 -->
+            <div class="qa-box">
+                <details>
+                    <summary>21. What is the purpose of a 'Session' and a 'Cookie' in a web app?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Web Development</span>
+                        <p>Both are used to store user information, as HTTP is stateless. **Cookies** are small data pieces stored on the user's browser. **Sessions** store data on the server and use a cookie as a unique key to identify the user.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OS 22 -->
+            <div class="qa-box">
+                <details>
+                    <summary>22. What is a 'Process' and a 'Thread'?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OS Concepts</span>
+                        <p>A **Process** is an instance of a computer program being executed (like running Chrome). A **Thread** is a smaller part of a process that can run independently. Multiple threads can exist within one process, sharing resources.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- OS 23 -->
+            <div class="qa-box">
+                <details>
+                    <summary>23. What is 'Deadlock' in an Operating System?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">OS Concepts</span>
+                        <p>A Deadlock happens when two or more processes are waiting for each other to release a resource, and none of them can proceed. It's like two cars blocking each other in a narrow lane.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- WEB 24 -->
+            <div class="qa-box">
+                <details>
+                    <summary>24. Differentiate between Frontend and Backend.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Web Development</span>
+                        <p>**Frontend** is what the user sees and interacts with (UI, built with HTML, CSS, JS). **Backend** is the server, application logic, and database where data is stored and processed (Python, Java, Node.js).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- NETWORKING 25 -->
+            <div class="qa-box">
+                <details>
+                    <summary>25. What is an IP address?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Networking</span>
+                        <p>An IP (**Internet Protocol**) address is a unique numerical label assigned to every device (like your phone or laptop) connected to a computer network, used for identification and location addressing.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- NETWORKING 26 -->
+            <div class="qa-box">
+                <details>
+                    <summary>26. What are the common HTTP status codes (200, 404, 500)?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Networking/Web</span>
+                        <p>**200 OK** means the request succeeded. **404 Not Found** means the requested resource doesn't exist. **500 Internal Server Error** means the server failed to fulfill the request due to an unexpected condition.</p>
+                    </div>
+                </details>
+            </div>
+            
+            <h2 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Simulated Remaining Technical Questions (Q27 - Q100)</h2>
+
+            <!-- Placeholder for Q27 to Q100 -->
+            
+            <!-- DSA/OOP -->
+            <div class="qa-box"><details><summary>27. What is a 'Wrapper Class' in Java?</summary><div class="qa-answer"><span class="qa-category">Java/OOP</span><p>A Wrapper Class converts Java's primitive data types (like int, char) into objects. This is needed when working with collections that only store objects.</p></div></details></div>
+            <div class="qa-box"><details><summary>28. When is an algorithm considered 'stable' in sorting?</summary><div class="qa-answer"><span class="qa-category">DSA Algorithms</span><p>A sorting algorithm is stable if it keeps the relative order of records with equal keys (values) the same after sorting.</p></div></details></div>
+            <div class="qa-box"><details><summary>29. What is the key use of 'Abstraction' in OOP?</summary><div class="qa-answer"><span class="qa-category">OOP Pillars</span><p>Abstraction means showing only essential information to the user and hiding the complex background details. It simplifies using the code.</p></div></details></div>
+            <div class="qa-box"><details><summary>30. What is 'Garbage Collection'?</summary><div class="qa-answer"><span class="qa-category">Java/Memory Mgmt</span><p>Garbage Collection is an automatic memory management process in languages like Java that automatically reclaims memory occupied by objects that are no longer being used by the program.</p></div></details></div>
+            <div class="qa-box"><details><summary>31. What is the time complexity of Quick Sort?</summary><div class="qa-answer"><span class="qa-category">DSA Complexity</span><p>In the average and best case, Quick Sort is $O(n \log n)$. In the worst case, it can be $O(n^2)$.</p></div></details></div>
+            <div class="qa-box"><details><summary>32. Name two different ways to implement a 'Graph'.</summary><div class="qa-answer"><span class="qa-category">DSA Structures</span><p>Graphs can be implemented using an **Adjacency Matrix** (good for dense graphs) or an **Adjacency List** (better for sparse graphs).</p></div></details></div>
+            <div class="qa-box"><details><summary>33. What is method 'Overloading' vs 'Overriding'?</summary><div class="qa-answer"><span class="qa-category">OOP Polymorphism</span><p>Overloading: Same method name, but different parameters (in the same class). Overriding: Same method name and same parameters (in parent and child classes).</p></div></details></div>
+            <div class="qa-box"><details><summary>34. What is a 'constructor'?</summary><div class="qa-answer"><span class="qa-category">OOP Concepts</span><p>A constructor is a special method in a class that is called automatically when an object is created. Its main purpose is to initialize the object's variables.</p></div></details></div>
+            <div class="qa-box"><details><summary>35. What is the key advantage of a 'Dynamic Array' (like ArrayList)?</summary><div class="qa-answer"><span class="qa-category">DSA Structures</span><p>The main advantage is that its size can grow or shrink automatically during runtime, unlike traditional static arrays.</p></div></details></div>
+            
+            <!-- DBMS/SQL -->
+            <div class="qa-box"><details><summary>36. What is the difference between a 'WHERE' clause and a 'HAVING' clause?</summary><div class="qa-answer"><span class="qa-category">SQL Filtering</span><p>The **WHERE** clause is used to filter records *before* grouping. The **HAVING** clause is used to filter groups *after* grouping has been done (often used with aggregate functions).</p></div></details></div>
+            <div class="qa-box"><details><summary>37. What is 'Indexing' in a database?</summary><div class="qa-answer"><span class="qa-category">DBMS Concepts</span><p>Indexing is like creating a book's index. It speeds up data retrieval operations by quickly pointing to where the data is stored in the table, but it slows down data modification (INSERT/UPDATE).</p></div></details></div>
+            <div class="qa-box"><details><summary>38. Explain 'Left Join'.</summary><div class="qa-answer"><span class="qa-category">SQL Joins</span><p>A LEFT JOIN returns all rows from the **left** table, and the matching rows from the right table. If there is no match, the right side returns NULL.</p></div></details></div>
+            <div class="qa-box"><details><summary>39. What is a 'View' in SQL?</summary><div class="qa-answer"><span class="qa-category">SQL Objects</span><p>A View is a **virtual table** whose contents are defined by an SQL query. It doesn't store data itself; it just shows the data from real tables based on the query definition.</p></div></details></div>
+            <div class="qa-box"><details><summary>40. What is 'Stored Procedure'?</summary><div class="qa-answer"><span class="qa-category">SQL Programming</span><p>A Stored Procedure is a prepared SQL code block that you save in the database. You can run it multiple times whenever needed, which improves performance and security.</p></div></details></div>
+            <div class="qa-box"><details><summary>41. What is the main purpose of 3rd Normal Form (3NF)?</summary><div class="qa-answer"><span class="qa-category">DBMS Normalization</span><p>The purpose of 3NF is to eliminate fields that are not fully dependent on the primary key, thereby reducing data redundancy.</p></div></details></div>
+            
+            <!-- Web/OS/Networking -->
+            <div class="qa-box"><details><summary>42. What is the 'DOM' in web development?</summary><div class="qa-answer"><span class="qa-category">Web Development</span><p>The **Document Object Model (DOM)** is a programming interface for HTML and XML documents. It represents the page so that programs (like JavaScript) can change the structure, style, and content of the document.</p></div></details></div>
+            <div class="qa-box"><details><summary>43. What is the 'OSI Model' and its key layers?</summary><div class="qa-answer"><span class="qa-category">Networking</span><p>The **Open Systems Interconnection (OSI)** model describes how information moves over a network. The key layers are Application, Transport, Network, and Data Link (among others).</p></div></details></div>
+            <div class="qa-box"><details><summary>44. What is 'Multithreading' and why is it useful?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>Multithreading allows a single program to have multiple parts running at the same time. It's useful for improving the performance and responsiveness of applications by utilizing CPU cores effectively.</p></div></details></div>
+            <div class="qa-box"><details><summary>45. What is 'REST API'?</summary><div class="qa-answer"><span class="qa-category">Web Services</span><p>REST (**Representational State Transfer**) is an architectural style for designing networked applications. It often uses standard HTTP methods (GET, POST, PUT, DELETE) to communicate between systems.</p></div></details></div>
+            <div class="qa-box"><details><summary>46. How does 'CSS Box Model' work?</summary><div class="qa-answer"><span class="qa-category">Frontend Basics</span><p>The Box Model describes how HTML elements are laid out on a page. Every element is wrapped by Content, Padding, Border, and Margin (from inside to outside).</p></div></details></div>
+            <div class="qa-box"><details><summary>47. What is 'Recursion'?</summary><div class="qa-answer"><span class="qa-category">Programming Concepts</span><p>Recursion is a method where the solution to a problem depends on solutions to smaller instances of the same problem. In coding, it means a function calling itself.</p></div></details></div>
+            <div class="qa-box"><details><summary>48. What is the use of 'Final' keyword in Java?</summary><div class="qa-answer"><span class="qa-category">Java/OOP</span><p>The 'final' keyword can be used to restrict the user. If used with a variable, the value cannot be changed. If used with a class, it cannot be inherited. If used with a method, it cannot be overridden.</p></div></details></div>
+            <div class="qa-box"><details><summary>49. Define 'Encapsulation' in Python/JavaScript terms.</summary><div class="qa-answer"><span class="qa-category">OOP Concepts</span><p>It means using conventions (like a single underscore `_` or double underscore `__` in Python) to tell other developers that a variable is intended to be private or internal to the class.</p></div></details></div>
+            <div class="qa-box"><details><summary>50. What is a 'Primary Partition' in an OS?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>A Primary Partition is a physical section of a hard disk that can be used as a separate operating system drive. It's where the OS is typically installed and boots from.</p></div></details></div>
+            
+            <!-- Q51 - Q75: Mixed Topics -->
+            <div class="qa-box"><details><summary>51. What is a 'Cookie'?</summary><div class="qa-answer"><span class="qa-category">Web Basics</span><p>A small file or piece of data stored on the user's computer by a web browser, used to remember user information like login status or preferences.</p></div></details></div>
+            <div class="qa-box"><details><summary>52. Why is $O(\log n)$ considered very efficient?</summary><div class="qa-answer"><span class="qa-category">DSA Complexity</span><p>It means the time taken to run the algorithm grows very slowly as the input size increases (e.g., in Binary Search, doubling the input only adds one step).</p></div></details></div>
+            <div class="qa-box"><details><summary>53. What is 'Authentication' vs 'Authorization'?</summary><div class="qa-answer"><span class="qa-category">Security/Web</span><p>**Authentication** verifies who you are (login/password). **Authorization** determines what you are allowed to do (permissions/access rights) after you are logged in.</p></div></details></div>
+            <div class="qa-box"><details><summary>54. Name four main features of OOP.</summary><div class="qa-answer"><span class="qa-category">OOP Pillars</span><p>The four main pillars are: Encapsulation, Inheritance, Polymorphism, and Abstraction.</p></div></details></div>
+            <div class="qa-box"><details><summary>55. Write an SQL query to get all unique cities from a 'Customers' table.</summary><div class="qa-answer"><span class="qa-category">SQL Queries</span><p><code>SELECT DISTINCT City FROM Customers;</code></p></div></details></div>
+            <div class="qa-box"><details><summary>56. What is 'Cascading Style Sheets' (CSS)?</summary><div class="qa-answer"><span class="qa-category">Frontend Basics</span><p>CSS is used to describe how HTML elements should be displayed on screen, paper, or in other media (i.e., it handles the look and feel of a webpage).</p></div></details></div>
+            <div class="qa-box"><details><summary>57. What is 'Denormalization' and when is it used?</summary><div class="qa-answer"><span class="qa-category">DBMS Design</span><p>It is the process of intentionally adding redundancy to a normalized database, often to improve **read performance** and speed up complex queries (at the cost of some update speed).</p></div></details></div>
+            <div class="qa-box"><details><summary>58. What is the 'Virtual Machine' in Java (JVM)?</summary><div class="qa-answer"><span class="qa-category">Java Concepts</span><p>The JVM is an abstract machine that allows Java code (bytecode) to be run on any platform (Windows, Linux, Mac). This enables Java's 'Write Once, Run Anywhere' capability.</p></div></details></div>
+            <div class="qa-box"><details><summary>59. How does an 'Index' improve query speed?</summary><div class="qa-answer"><span class="qa-category">DBMS Indexing</span><p>It allows the database to look up rows directly using the index value, instead of scanning the entire table from top to bottom (full table scan).</p></div></details></div>
+            <div class="qa-box"><details><summary>60. What is 'Recursion' and when can it cause an error?</summary><div class="qa-answer"><span class="qa-category">Programming Concepts</span><p>Recursion is when a function calls itself. It causes a **Stack Overflow Error** if the base condition (the stopping point) is never reached, leading to infinite calls.</p></div></details></div>
+            <div class="qa-box"><details><summary>61. What is the function of the 'Operating System' (OS)?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>The OS manages all hardware and software resources of the computer. It handles memory, controls input/output devices, and manages running processes.</p></div></details></div>
+            <div class="qa-box"><details><summary>62. What is the use of 'Static' keyword in Java/C++?</summary><div class="qa-answer"><span class="qa-category">Language Basics</span><p>The 'static' keyword means that the member (variable or method) belongs to the **class itself**, not to a specific object instance. It is shared across all objects of that class.</p></div></details></div>
+            <div class="qa-box"><details><summary>63. Explain 'TCP' vs 'UDP' in networking.</summary><div class="qa-answer"><span class="qa-category">Networking</span><p>**TCP** (Transmission Control Protocol) is reliable, ordered, and connection-based. **UDP** (User Datagram Protocol) is faster, unreliable, and connection-less (used for streaming).</p></div></details></div>
+            <div class="qa-box"><details><summary>64. What is a 'Trigger' in SQL?</summary><div class="qa-answer"><span class="qa-category">SQL Programming</span><p>A Trigger is a special type of stored procedure that automatically runs when an event occurs in the database (like an INSERT, UPDATE, or DELETE operation).</p></div></details></div>
+            <div class="qa-box"><details><summary>65. Give an example of a $O(n)$ algorithm.</summary><div class="qa-answer"><span class="qa-category">DSA Complexity</span><p>Searching for an element in an unsorted array (Linear Search) is $O(n)$, because in the worst case, you might have to check every single element once.</p></div></details></div>
+
+            <!-- Q66 - Q100: Advanced & Final Review -->
+            <div class="qa-box"><details><summary>66. How do you implement a Queue using two Stacks?</summary><div class="qa-answer"><span class="qa-category">DSA Structures</span><p>Use one stack for enqueue (pushing) and a second stack for dequeue (popping). Before dequeuing, move all elements from the first stack to the second stack to reverse the order.</p></div></details></div>
+            <div class="qa-box"><details><summary>67. What are the four types of SQL Joins?</summary><div class="qa-answer"><span class="qa-category">SQL Joins</span><p>INNER JOIN, LEFT (OUTER) JOIN, RIGHT (OUTER) JOIN, and FULL (OUTER) JOIN.</p></div></details></div>
+            <div class="qa-box"><details><summary>68. What are 'SOPs' (Standard Operating Procedures)?</summary><div class="qa-answer"><span class="qa-category">IT Process</span><p>SOPs are detailed, written instructions that guide employees on how to perform a routine activity, ensuring consistency and compliance in business processes.</p></div></details></div>
+            <div class="qa-box"><details><summary>69. What is the key principle of 'Agile Methodology'?</summary><div class="qa-answer"><span class="qa-category">Software Methodologies</span><p>The key principle is delivering working software frequently and adapting to changing requirements through continuous feedback and collaboration.</p></div></details></div>
+            <div class="qa-box"><details><summary>70. Why is 'HTML' not considered a programming language?</summary><div class="qa-answer"><span class="qa-category">Web Basics</span><p>HTML is a **markup language**. It defines the structure and content of a webpage. It doesn't perform calculations or execute logic; it just formats data.</p></div></details></div>
+            <div class="qa-box"><details><summary>71. What is the difference between Array and ArrayList (Java)?</summary><div class="qa-answer"><span class="qa-category">Java/DSA</span><p>Array is fixed-size and stores primitives/objects. **ArrayList** is dynamic (resizable) and only stores objects (using a dynamic array structure internally).</p></div></details></div>
+            <div class="qa-box"><details><summary>72. What are 'Semaphores'?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>Semaphores are synchronization tools used to control access to shared resources by multiple processes in a concurrent environment, preventing conflicts.</p></div></details></div>
+            <div class="qa-box"><details><summary>73. Explain 'Session Management' in a web application.</summary><div class="qa-answer"><span class="qa-category">Web Security</span><p>It's the process of tracking a user's activity and status across multiple HTTP requests, typically by generating a unique Session ID after login and storing it in a cookie.</p></div></details></div>
+            <div class="qa-box"><details><summary>74. What is the purpose of the 'GROUP BY' clause in SQL?</summary><div class="qa-answer"><span class="qa-category">SQL Queries</span><p>It groups rows that have the same values into summary rows, often used with aggregate functions like COUNT, MAX, MIN, SUM, or AVG.</p></div></details></div>
+            <div class="qa-box"><details><summary>75. What is the time complexity of searching in a BST?</summary><div class="qa-answer"><span class="qa-category">DSA Complexity</span><p>In the average case, it is $O(\log n)$. In the worst case (if the tree is highly unbalanced), it degrades to $O(n)$.</p></div></details></div>
+            <div class="qa-box"><details><summary>76. What is 'Interface' in OOP?</summary><div class="qa-answer"><span class="qa-category">OOP Concepts</span><p>An Interface is a completely abstract class that is used to define a contract. It declares a set of methods that any class implementing the interface must implement.</p></div></details></div>
+            <div class="qa-box"><details><summary>77. What is 'DNS'?</summary><div class="qa-answer"><span class="qa-category">Networking</span><p>**Domain Name System** (DNS) translates human-readable domain names (like google.com) into machine-readable IP addresses.</p></div></details></div>
+            <div class="qa-box"><details><summary>78. Explain the 'Two-Phase Commit' protocol.</summary><div class="qa-answer"><span class="qa-category">DBMS Transactions</span><p>A protocol that ensures all parties in a distributed transaction either **commit** (complete) the change or **abort** (roll back) it entirely, maintaining atomicity.</p></div></details></div>
+            <div class="qa-box"><details><summary>79. What is a 'Class Method' vs an 'Instance Method' (Python)?</summary><div class="qa-answer"><span class="qa-category">Python/OOP</span><p>A Class Method works on the class itself (uses `cls`). An Instance Method works on a specific object (uses `self`).</p></div></details></div>
+            <div class="qa-box"><details><summary>80. Why is Binary Search faster than Linear Search?</summary><div class="qa-answer"><span class="qa-category">DSA Algorithms</span><p>Binary Search eliminates half of the remaining data in each step ($O(\log n)$), while Linear Search checks one element at a time ($O(n)$).</p></div></details></div>
+            <div class="qa-box"><details><summary>81. What is the function of the 'Kernel' in an OS?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>The Kernel is the core part of the OS. It manages the communication between hardware and software, handling memory, CPU scheduling, and I/O operations.</p></div></details></div>
+            <div class="qa-box"><details><summary>82. What is 'SQL Injection'?</summary><div class="qa-answer"><span class="qa-category">Security/DBMS</span><p>A security vulnerability where an attacker inserts malicious SQL code into a web form input field to bypass security or damage the database.</p></div></details></div>
+            <div class="qa-box"><details><summary>83. What are 'Unit Tests' and why are they important?</summary><div class="qa-answer"><span class="qa-category">Software Testing</span><p>Unit Tests check if the smallest parts of code (functions or methods) work correctly and independently. They are essential for finding bugs early and making code safe for refactoring.</p></div></details></div>
+            <div class="qa-box"><details><summary>84. What is 'Client-Side' vs 'Server-Side' rendering?</summary><div class="qa-answer"><span class="qa-category">Web Development</span><p>**Client-Side** rendering means the browser loads the blank page and uses JavaScript to build the content. **Server-Side** rendering means the server builds the full HTML page before sending it to the browser.</p></div></details></div>
+            <div class="qa-box"><details><summary>85. What is a 'Hash Collision' and how is it resolved?</summary><div class="qa-answer"><span class="qa-category">DSA Hashing</span><p>A collision occurs when two different keys map to the same position in the hash table. It is resolved using techniques like **Chaining** (using a linked list at that position) or **Open Addressing** (finding the next empty slot).</p></div></details></div>
+            <div class="qa-box"><details><summary>86. What is the 'this' keyword in OOP (Java/JS)?</summary><div class="qa-answer"><span class="qa-category">OOP Concepts</span><p>The 'this' keyword refers to the **current object instance**. It is used inside a method or constructor to refer to the object that is executing the code.</p></div></details></div>
+            <div class="qa-box"><details><summary>87. Explain 'Authentication' vs 'Authorization'.</summary><div class="qa-answer"><span class="qa-category">Security/Web</span><p>**Authentication** proves who you are (login). **Authorization** defines what actions you are allowed to perform (access rights).</p></div></details></div>
+            <div class="qa-box"><details><summary>88. What is the difference between a 'Hub' and a 'Switch'?</summary><div class="qa-answer"><span class="qa-category">Networking Devices</span><p>A **Hub** sends data to all connected devices (less efficient). A **Switch** only sends data to the specific device it is meant for (smarter and faster).</p></div></details></div>
+            <div class="qa-box"><details><summary>89. What is 'Method Signature'?</summary><div class="qa-answer"><span class="qa-category">OOP Concepts</span><p>A method's signature is its name and the list of its parameters (number, type, and order). The return type is generally not considered part of the method signature.</p></div></details></div>
+            <div class="qa-box"><details><summary>90. Why is $O(n!)$ considered the worst time complexity?</summary><div class="qa-answer"><span class="qa-category">DSA Complexity</span><p>The execution time grows extremely rapidly (factorially) with the input size. Algorithms with this complexity are only practical for very small input sets.</p></div></details></div>
+            <div class="qa-box"><details><summary>91. What is 'Virtual Memory' in an OS?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>Virtual Memory is a technique that allows a computer to compensate for physical memory shortages by temporarily transferring data from the RAM to disk storage (hard drive).</p></div></details></div>
+            <div class="qa-box"><details><summary>92. Explain 'Cross-Site Scripting (XSS)' attack.</summary><div class="qa-answer"><span class="qa-category">Web Security</span><p>An XSS attack occurs when malicious script code is injected into a trusted website. This script runs in the user's browser, potentially stealing cookies or session information.</p></div></details></div>
+            <div class="qa-box"><details><summary>93. How is a 'Stack Overflow' error caused?</summary><div class="qa-answer"><span class="qa-category">Programming Errors</span><p>It usually happens during **infinite recursion**, where a function keeps calling itself without a base (stopping) condition, eventually running out of the memory space (stack) allocated for functions.</p></div></details></div>
+            <div class="qa-box"><details><summary>94. What is 'Referential Integrity'?</summary><div class="qa-answer"><span class="qa-category">DBMS Integrity</span><p>A concept that ensures relationships between tables remain consistent. It requires that a foreign key value in one table must either match a primary key value in the related table or be NULL.</p></div></details></div>
+            <div class="qa-box"><details><summary>95. What is a 'Load Balancer' in a web system?</summary><div class="qa-answer"><span class="qa-category">Web/Architecture</span><p>A device or service that efficiently distributes incoming network traffic across multiple servers. This ensures no single server is overloaded, improving reliability and performance.</p></div></details></div>
+            <div class="qa-box"><details><summary>96. What is the 'Heap' data structure?</summary><div class="qa-answer"><span class="qa-category">DSA Structures</span><p>A Heap is a complete binary tree where the parent node is either always greater than (Max Heap) or always smaller than (Min Heap) its children. It's often used to implement Priority Queues.</p></div></details></div>
+            <div class="qa-box"><details><summary>97. What is the primary use of 'Interface' in Java?</summary><div class="qa-answer"><span class="qa-category">Java/OOP</span><p>It's used to achieve **multiple inheritance** (since Java doesn't allow multiple class inheritance) and define a standard set of behaviors (contracts) that a class must follow.</p></div></details></div>
+            <div class="qa-box"><details><summary>98. What is the difference between 'git pull' and 'git fetch'?</summary><div class="qa-answer"><span class="qa-category">Version Control (Git)</span><p>**Fetch** downloads changes from the remote repository but doesn't integrate them into your local branch. **Pull** does both: it fetches the changes and then merges/integrates them automatically.</p></div></details></div>
+            <div class="qa-box"><details><summary>99. What are 'Threads' primarily used for in modern applications?</summary><div class="qa-answer"><span class="qa-category">OS Concepts</span><p>Threads are used to handle multiple tasks concurrently within a single program (e.g., in a web browser, one thread loads images while another handles user input).</p></div></details></div>
+            <div class="qa-box"><details><summary>100. Write a basic SQL query to create an index on the 'EmployeeID' column of the 'Employees' table.</summary><div class="qa-answer"><span class="qa-category">SQL Queries</span><p><code>CREATE INDEX idx_employeeid ON Employees (EmployeeID);</code></p></div></details></div>
+            
+        </div>
+    </div>
+</section>
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo" style="display:flex; align-items:center; gap:10px; color: white;">
+                        <img src="logo.png" alt="Bangalore Connect Logo" style="width:36px; height:36px; object-fit:contain;" />
+                        Bangalore Connect
+                    </a>
+                    <p class="footer-desc" style="text-align: justify;">
+                        Bangalore Connect is your go-to job portal for finding the best jobs in Bangalore. We connect Smart People with top companies, making your career growth easy and efficient. Find verified jobs and move your career forward today.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029VbC3pS63gvWSBbw93I19" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:9019540558" class="social-link"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/company/bangalore-connect/ " class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bang.aloreconnect/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">For Job Seekers</h3>
+                    <ul class="footer-links">
+                        <li><a href="./privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="./faqs.html" class="footer-link"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="./tandc.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms and Conditions</a></li>
+                        <li><a href="./report.html" class="footer-link"><i class="fas fa-chevron-right"></i> Report Problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                    </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script> window.addEventListener('load', () => document.body.classList.add('loaded')); </script>
+</body>
+</html>

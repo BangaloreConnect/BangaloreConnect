@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programming Languages You Must Know in 2025 — A Complete Guide for Bangalore Developers | Bangalore Connect</title>
+
+  <meta name="description" content="Friendly, practical guide for Bangalore developers: the top programming languages to learn in 2025, career paths, company examples, skill roadmaps, interview tips, and a comparison table for front-end, back-end, Java full-stack and Python full-stack roles." />
+  <meta name="keywords" content="programming jobs in Bangalore, Python developer jobs, Java developer Bangalore, full stack developer Bangalore, IT jobs 2025, front end developer, back end developer, Golang jobs, Rust jobs, programming languages 2025" />
+  <link rel="icon" type="image/png" href="logo.png" sizes="64x64">
+  <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* Inline CSS - matching previous Bangalore Connect pages */
+    :root{
+      --primary: #0077b5;
+      --primary-dark: #005f8d;
+      --bg: #ffffff;
+      --muted: #6b7280;
+      --container: 1000px;
+      --radius: 10px;
+      font-family: "Inter", "Plus Jakarta Sans", Arial, sans-serif;
+    }
+
+    body{
+      margin:0;
+      background:#f4f6f8;
+      color:#0f1720;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.7;
+    }
+
+    .container{ max-width:var(--container); margin:0 auto; padding:0 20px; }
+
+    header{
+      background:var(--bg);
+      border-bottom:1px solid #e6e9ee;
+      position:sticky;
+      top:0;
+      z-index:50;
+    }
+
+    .nav-container{ display:flex; align-items:center; justify-content:space-between; padding:14px 0; }
+    .logo{ display:flex; gap:12px; align-items:center; text-decoration:none; color:inherit; font-weight:700; }
+    .logo-img{ width:44px; height:44px; object-fit:contain; }
+
+    nav .nav-menu{ list-style:none; display:flex; gap:16px; margin:0; padding:0; align-items:center; }
+    .nav-link{ text-decoration:none; color:#123; font-weight:500; padding:6px 8px; }
+    .nav-link:hover{ color:var(--primary); }
+
+    .section.article-content{ padding-top:90px; padding-bottom:60px; }
+    .article-card{
+      background:var(--bg);
+      border-radius:var(--radius);
+      padding:28px;
+      margin-bottom:18px;
+      box-shadow:0 8px 24px rgba(18,24,33,0.04);
+    }
+
+    .article-main-title{ font-size:30px; margin:6px 0 6px; line-height:1.15; }
+    .article-meta{ color:var(--muted); margin-bottom:12px; font-size:0.95rem; }
+
+    h2{ color:#0b1220; margin-top:1.2em; margin-bottom:0.6em; }
+    h3{ color:#0b1220; margin-top:1em; margin-bottom:0.4em; }
+
+    p{ margin-bottom:0.9em; text-align:justify; }
+    ul{ margin-left:22px; margin-bottom:0.9em; }
+    ol{ margin-left:22px; margin-bottom:0.9em; }
+
+    .btn{ display:inline-block; background:var(--primary); color:#fff; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:600; }
+    .btn:hover{ background:var(--primary-dark); }
+
+    .highlight{ color:var(--primary); font-weight:700; }
+    .note{ font-size:0.95rem; color:var(--muted); margin-top:6px; }
+
+    .language-card{ border-left:4px solid var(--primary); padding:14px; margin-bottom:12px; background:#fbfdff; border-radius:8px; }
+    .table-wrap{ overflow-x:auto; margin-top:12px; margin-bottom:12px; }
+    table{ width:100%; border-collapse:collapse; min-width:680px; }
+    th, td{ border:1px solid #e8edf1; padding:10px 12px; text-align:left; }
+    th{ background:#f8fbff; }
+    code{ background:#f4f6f8; padding:2px 6px; border-radius:4px; font-family:monospace; }
+
+    footer{ background:#fff; border-top:1px solid #e6e9ee; padding:20px 0; margin-top:26px; }
+    .footer-grid{ display:grid; grid-template-columns:1fr 320px; gap:22px; align-items:start; }
+    .footer-desc{ text-align:justify; color:#222; }
+
+    blockquote{ margin:10px 0; padding-left:12px; border-left:4px solid #e5e7eb; background:#fff; border-radius:6px; padding:12px; }
+
+    @media (max-width:780px){
+      .footer-grid{ grid-template-columns: 1fr; }
+      .article-main-title{ font-size:22px; }
+      nav .nav-menu{ gap:10px; font-size:0.95rem; }
+    }
+  </style>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3551205878174657"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="loader" style="display:none;">Loading...</div>
+
+  <header>
+    <div class="container nav-container">
+      <a href="./index.html" class="logo">
+        <img src="logo.png" alt="Bangalore Connect Logo" class="logo-img">
+        <span>Bangalore Connect</span>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="./index.html" class="nav-link">Home</a></li>
+          <li><a href="./index.html#jobs" class="nav-link">Jobs</a></li>
+          <li><a href="./index.html#about" class="nav-link">About</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="section article-content">
+    <div class="container">
+      <div class="article-card">
+        <h1 class="article-main-title">Programming Languages You Must Know in 2025 — A Complete Guide for Bangalore Developers</h1>
+        
+
+        <!-- Intro -->
+        <article>
+          <p>
+            Bangalore remains a top destination for software developers. Whether you are a fresh graduate, an experienced engineer, or someone switching domains, choosing the right programming languages to learn in 2025 matters. This friendly guide explains which languages are in demand, why they matter, how companies use them, and how you can plan a clear learning path. I kept the language simple and practical so you can use these tips right away.
+          </p>
+
+          <h2>How to use this guide</h2>
+          <p>
+            Read the sections that match your goal: if you want backend roles focus on Go, Java, Python; for frontend, focus on JavaScript and TypeScript; for systems or high-performance work consider Rust. I also include real company examples from Bangalore, a comparison table for front-end vs back-end vs full-stack (Java & Python), learning plans, interview tips, and project ideas.
+          </p>
+
+          <h2>Why languages still matter in 2025</h2>
+          <p>
+            Tools change, but the choice of language affects hiring, performance, ecosystem, and the kinds of projects you can join. A language shows employers what problems you can solve quickly. For example, a job that needs low-latency microservices will favor Go or Java, while a machine learning role will prefer Python.
+          </p>
+
+          <h2>Quick list — top languages to consider in 2025</h2>
+          <ul>
+            <li><strong>Python:</strong> Data, ML, backend scripting, automation.</li>
+            <li><strong>Java / Kotlin:</strong> Enterprise backend, Android, large systems.</li>
+            <li><strong>JavaScript / TypeScript:</strong> Frontend and full-stack web apps.</li>
+            <li><strong>Golang (Go):</strong> Microservices, cloud-native systems.</li>
+            <li><strong>Rust:</strong> Systems programming, Web3, performance-critical code.</li>
+            <li><strong>Swift / Kotlin (mobile):</strong> Native mobile apps.</li>
+            <li><strong>SQL and data languages:</strong> SQL, SparkSQL for analytics roles.</li>
+          </ul>
+
+          <h2>In-depth: Python — why it still rules many job listings</h2>
+          <div class="language-card">
+            <h3>Where Python is used</h3>
+            <p>Python is the go-to language for data science, machine learning, and many backend APIs. Its libraries (Pandas, NumPy, scikit-learn, TensorFlow, PyTorch) make it ideal for quick experiments and production ML systems. In Bangalore, startups and MNCs both hire Python engineers for analytics and backend services.</p>
+
+            <h3>Why learn Python</h3>
+            <ul>
+              <li>Large ecosystem and many ready-made libraries.</li>
+              <li>Readable syntax that speeds up prototyping.</li>
+              <li>Strong demand across startups, fintech, healthtech and more.</li>
+            </ul>
+
+            <h3>Typical roles</h3>
+            <ul>
+              <li>Data Scientist, ML Engineer, Backend Developer, Automation Engineer.</li>
+            </ul>
+
+            <h3>Start-up / company examples (Bangalore)</h3>
+            <p>Companies like Razorpay, Swiggy, Dunzo, Flipkart, and many AI startups use Python for analytics and ML tasks. Product teams that build recommendation engines or fraud detection often prefer Python for models and pipelines.</p>
+          </div>
+
+          <h2>In-depth: Java & Kotlin — enterprise and Android stronghold</h2>
+          <div class="language-card">
+            <h3>Where Java / Kotlin is used</h3>
+            <p>Java is a trusted choice for enterprise systems, large-scale backend services, and Android (Java & Kotlin). It powers many banking, insurance, and enterprise applications. Kotlin is increasingly used for Android apps and modern backend services.</p>
+
+            <h3>Why learn Java / Kotlin</h3>
+            <ul>
+              <li>Mature ecosystem with strong tooling and performance.</li>
+              <li>Large enterprise demand in Bangalore's IT services firms and product companies.</li>
+              <li>Kotlin brings concise syntax and modern features for Android and server-side apps.</li>
+            </ul>
+
+            <h3>Typical roles</h3>
+            <ul>
+              <li>Backend Engineer, Platform Engineer, Android Developer, Systems Engineer.</li>
+            </ul>
+
+            <h3>Company examples</h3>
+            <p>Infosys, TCS, Wipro (enterprise projects), and product teams at Flipkart use Java and Kotlin extensively for backend and mobile work.</p>
+          </div>
+
+          <h2>In-depth: JavaScript & TypeScript — front-end and full-stack</h2>
+          <div class="language-card">
+            <h3>Where JS / TS is used</h3>
+            <p>JavaScript is the language of the web. TypeScript adds types and scales better for large codebases. React, Angular, and Vue are the common front-end frameworks; Node.js is widely used for backend APIs.</p>
+
+            <h3>Why learn JavaScript / TypeScript</h3>
+            <ul>
+              <li>Almost every web product needs JS — high job volume for front-end and full-stack roles.</li>
+              <li>TypeScript improves maintainability for large teams.</li>
+              <li>Strong ecosystem (React, Next.js, Node.js, Express, NestJS).</li>
+            </ul>
+
+            <h3>Typical roles</h3>
+            <ul>
+              <li>Frontend Developer, Full-Stack Developer, UI Engineer.</li>
+            </ul>
+
+            <h3>Company examples</h3>
+            <p>Product teams at Microsoft, Google, Adobe, Freshworks, and many startups use TypeScript for front-end and Node.js for backend services.</p>
+          </div>
+
+          <h2>In-depth: Go (Golang) — cloud-native and microservices</h2>
+          <div class="language-card">
+            <h3>Where Go is used</h3>
+            <p>Go is favored for microservices, networking tools, and cloud-native systems. Its simplicity, concurrency model, and compiled performance make it suitable for services that need to handle many requests with low overhead.</p>
+
+            <h3>Why learn Go</h3>
+            <ul>
+              <li>Excellent for building reliable, fast microservices.</li>
+              <li>Used by cloud and infrastructure teams — good fit for SRE/DevOps roles.</li>
+              <li>Growing adoption in Bangalore startups building scalable backends.</li>
+            </ul>
+
+            <h3>Typical roles</h3>
+            <ul>
+              <li>Cloud Engineer, Backend Developer, Platform Engineer, SRE.</li>
+            </ul>
+
+            <h3>Company examples</h3>
+            <p>Companies working on cloud infrastructure, payment gateways, and platforms (some teams at Amazon, Swiggy, and fintech startups) prefer Go for performance-sensitive services.</p>
+          </div>
+
+          <h2>In-depth: Rust — safety and performance</h2>
+          <div class="language-card">
+            <h3>Where Rust is used</h3>
+            <p>Rust is growing for systems programming, Web3, blockchain, and tools where memory safety and speed matter. It has a steeper learning curve but offers strong guarantees against certain classes of bugs.</p>
+
+            <h3>Why learn Rust</h3>
+            <ul>
+              <li>Memory safety without garbage collection — good for systems and security work.</li>
+              <li>Increasing demand in startups focusing on Web3 and high-performance tools.</li>
+            </ul>
+
+            <h3>Typical roles</h3>
+            <ul>
+              <li>Systems Engineer, Blockchain Developer, Performance Engineer.</li>
+            </ul>
+
+            <h3>Company examples</h3>
+            <p>Smaller teams and some new-age startups working on Web3 or tooling projects in Bangalore may use Rust for performance and safety-critical components.</p>
+          </div>
+
+          <h2>Mobile languages — Swift and Kotlin</h2>
+          <div class="language-card">
+            <h3>Where they fit</h3>
+            <p>Swift (iOS) and Kotlin (Android) are the modern choices for native mobile app development. Kotlin multiplatform is also gaining traction for sharing code across platforms.</p>
+
+            <h3>Why learn them</h3>
+            <ul>
+              <li>Native performance and deep platform integration.</li>
+              <li>Many consumer product companies in Bangalore hire mobile engineers frequently.</li>
+            </ul>
+
+            <h3>Typical roles & companies</h3>
+            <p>Roles: Mobile App Developer, Mobile SDK Engineer. Companies: Swiggy, Flipkart, PhonePe, Meesho, and many startup mobile teams.</p>
+          </div>
+
+          <h2>Data & analytics languages — SQL, Scala, Spark</h2>
+          <p>For data roles, SQL remains essential. Spark (Scala or PySpark) is common for large-scale data processing. If you're aiming for data engineering or analytics, get comfortable with SQL first, then add Spark or similar tools.</p>
+
+          <h2>Which languages pay more — a simple view</h2>
+          <p>
+            Pay depends more on role and experience than language alone. Specialist roles (cloud architects, ML engineers, SREs) often get higher pay, and those roles tend to use Go, Java, Python or Rust depending on domain. Full-stack roles with TypeScript + Node.js also command strong salaries in product companies.
+          </p>
+
+          <h2>Comparison table — Frontend vs Backend vs Java Full-Stack vs Python Full-Stack</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Role</th>
+                  <th>Primary Languages / Tools</th>
+                  <th>Typical Responsibilities</th>
+                  <th>Where to apply (company types)</th>
+                  <th>Why choose this path</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Front-End Developer</td>
+                  <td>HTML, CSS, JavaScript, TypeScript, React, Vue, Angular</td>
+                  <td>Build user interfaces, client-side logic, UI performance, accessibility</td>
+                  <td>Product companies, SaaS, startups, digital agencies</td>
+                  <td>Visible work, strong product focus, quick feedback from users</td>
+                </tr>
+                <tr>
+                  <td>Back-End Developer</td>
+                  <td>Java, Kotlin, Python, Go, Node.js, SQL, NoSQL</td>
+                  <td>API design, databases, business logic, scaling, security</td>
+                  <td>Enterprise firms, fintech, cloud companies, startups</td>
+                  <td>Work on core logic, systems thinking, higher impact on performance</td>
+                </tr>
+                <tr>
+                  <td>Java Full-Stack Developer</td>
+                  <td>Java (Spring), TypeScript/JS (React/Angular), SQL, Docker</td>
+                  <td>End-to-end features with enterprise-grade backend, integrations, and UI</td>
+                  <td>Enterprise product teams, banks, large startups, IT services</td>
+                  <td>Great for enterprise systems and large-scale, stable products</td>
+                </tr>
+                <tr>
+                  <td>Python Full-Stack Developer</td>
+                  <td>Python (Django/Flask), JavaScript/TypeScript (React/Vue), SQL, Celery</td>
+                  <td>Rapid prototyping, data-driven features, APIs and simple UI</td>
+                  <td>Data-first startups, AI/product companies, small to mid-size teams</td>
+                  <td>Fast development cycles, easy to add ML features and analytics</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>How companies in Bangalore use languages — quick examples</h2>
+          <p>
+            - Large IT services companies (Infosys, TCS, Wipro) often use Java, Python and .NET for client projects, with teams working on enterprise systems. <br>
+            - Product companies (Zoho, Freshworks) often combine TypeScript (frontend) with Java/Kotlin or Python backends. <br>
+            - Fintech and payments (Razorpay, PhonePe) mix Java, Go, and Python for backend systems and Node.js or TypeScript for some front-end and APIs. <br>
+            - Quick commerce & logistics (Swiggy, Zepto, Dunzo) use Go/Java for performance-sensitive services and Python for analytics.
+          </p>
+
+          <h2>How to choose the first language — short guide</h2>
+          <ul>
+            <li>Pick a role first (frontend, backend, data). The role decides the useful language.</li>
+            <li>If unsure: start with JavaScript/TypeScript (web) or Python (general purpose & data).</li>
+            <li>Consider local demand — Bangalore has many openings for Java, Python, TypeScript, and Go.</li>
+          </ul>
+
+          <h2>Learning path examples — 3 sample plans</h2>
+
+          <h3>Plan A — Backend Developer (Go / Java)</h3>
+          <ol>
+            <li>Basics: Learn language syntax, data structures, and standard libraries (30 days).</li>
+            <li>Web APIs: Build REST APIs and learn frameworks (2 months).</li>
+            <li>Databases: SQL and NoSQL basics, indexing, and simple design (1 month).</li>
+            <li>Cloud & DevOps basics: Docker, CI/CD, monitoring (2 months).</li>
+            <li>Project: Build a small microservice with tests and deploy on a cloud provider (1–2 months).</li>
+          </ol>
+
+          <h3>Plan B — Frontend Developer (TypeScript + React)</h3>
+          <ol>
+            <li>Basics: HTML, CSS, JavaScript fundamentals (30 days).</li>
+            <li>React & TS: Learn React and TypeScript, component design (2 months).</li>
+            <li>State & Data: Learn state management, REST & GraphQL (1 month).</li>
+            <li>Performance & Testing: Learn accessibility, testing and bundling (1 month).</li>
+            <li>Project: Build a responsive web app and deploy it (1–2 months).</li>
+          </ol>
+
+          <h3>Plan C — Data / ML (Python)</h3>
+          <ol>
+            <li>Basics: Python, NumPy, Pandas, plotting libraries (1 month).</li>
+            <li>ML basics: scikit-learn, simple models, evaluation metrics (2 months).</li>
+            <li>Deep learning & deployment: TensorFlow/PyTorch and simple model deploys (2 months).</li>
+            <li>Data engineering: SQL, ETL tools, scheduling (1 month).</li>
+            <li>Project: Build a simple end-to-end pipeline and deploy a model with a small API (1–2 months).</li>
+          </ol>
+
+          <h2>Project ideas that hire managers like</h2>
+          <ul>
+            <li>A small marketplace backend with search and filters (backend + DB work).</li>
+            <li>A responsive single-page app showing public data (frontend + UX focus).</li>
+            <li>A data pipeline that fetches, processes and visualizes public datasets (data engineering).</li>
+            <li>A bot or automation that solves a real repetitive task (show impact in hours saved).</li>
+          </ul>
+
+          <h2>How to prepare for interviews by language</h2>
+          <p>
+            - <strong>Python:</strong> Practice coding problems, knowledge of libraries, and a small data project to discuss.<br>
+            - <strong>Java / Kotlin:</strong> Focus on OOP, system design basics, threading and JVM ecosystem.<br>
+            - <strong>JavaScript / TypeScript:</strong> Know DOM, async programming, frameworks and bundling tools.<br>
+            - <strong>Go:</strong> Concurrency patterns, channels, microservice design and testing.<br>
+            - <strong>Rust:</strong> Ownership model, memory safety, and systems-level concepts.
+          </p>
+
+          <h2>How to show language knowledge on your resume</h2>
+          <ul>
+            <li>List languages with level (familiar / comfortable / expert).</li>
+            <li>Link to projects that show real usage (GitHub repos or live demos).</li>
+            <li>Include short lines about impact (e.g., "Built API that served 10k requests/day").</li>
+          </ul>
+
+          <h2>Open-source and contribution — why it helps</h2>
+          <p>
+            Contributing to open-source projects shows you can work with others and manage code reviews. Small, regular contributions to tools or libraries in your chosen language are more valuable than one large but private project.
+          </p>
+
+          <h2>Learning resources (friendly list)</h2>
+          <ul>
+            <li>Official docs and quickstart guides (always start here).</li>
+            <li>Interactive coding platforms for practice (for algorithms and basics).</li>
+            <li>Short project-based courses that let you ship a small app.</li>
+            <li>Community meetups and local Bangalore tech groups for networking.</li>
+          </ul>
+
+          <h2>How to choose between Java full-stack and Python full-stack</h2>
+          <p>
+            Java full-stack suits large-scale enterprise-level products with strong typing and long-term stability. Python full-stack is faster for prototyping and for adding data/ML features. If you plan to work in fintech or enterprise services, Java/Kotlin will be valuable. For data-heavy startups and product teams, Python can be the better choice.
+          </p>
+
+          <h2>Common pitfalls and how to avoid them</h2>
+          <ul>
+            <li>Trying to learn many languages at once — pick one and be reasonably good before branching out.</li>
+            <li>Not building real projects — theory without practice is weak.</li>
+            <li>Ignoring fundamentals — data structures and system design help you move between languages easily.</li>
+          </ul>
+
+          <h2>How employers test language skills</h2>
+          <p>
+            Employers often use a mix: coding tests, take-home projects, system design interviews, and behavioral rounds. For language-specific roles, expect small projects that mirror the daily work (e.g., build a simple API or a small frontend feature).
+          </p>
+
+          <h2>Work-from-home and remote considerations</h2>
+          <p>
+            Many Bangalore companies now offer hybrid or remote-friendly roles. Languages that support clear testability and automated deployments (Go, Python, TypeScript) make remote collaboration smoother because you can run tests and demos easily.
+          </p>
+
+          <h2>How to move from one language to another smoothly</h2>
+          <ul>
+            <li>Map core concepts: data types, control flow, standard libraries.</li>
+            <li>Build a small project in the new language that mirrors a project you already did.</li>
+            <li>Use language interop tools or microservices to gradually shift parts of a system.</li>
+          </ul>
+
+          <h2>Salary ranges by role (friendly approx. for Bangalore 2025)</h2>
+          <p>
+            Salaries vary widely. Below are rough ranges to help plan (INR per annum):
+          </p>
+          <ul>
+            <li>Entry-level / freshers: ₹3.5 LPA — ₹8 LPA</li>
+            <li>Mid-level (2–5 years): ₹8 LPA — ₹20 LPA</li>
+            <li>Senior (5+ years): ₹20 LPA — ₹50 LPA+</li>
+          </ul>
+          <p class="note">Specialist roles (SRE, data scientists, ML engineers) or product roles in deep-tech and fintech can command higher packages.</p>
+
+          <h2>Practical checklist for the next 90 days</h2>
+          <ol>
+            <li>Pick one primary language and one secondary language to learn.</li>
+            <li>Ship a small project and deploy it (API, web app or data pipeline).</li>
+            <li>Practice 3–5 coding problems per week if applying for product roles.</li>
+            <li>Update your resume and GitHub with clear README and demo links.</li>
+          </ol>
+
+          <h2>Interview day tips — language-specific</h2>
+          <ul>
+            <li>Bring clear notes and a small architecture diagram for system design.</li>
+            <li>For coding rounds, explain your thought process and test edge cases out loud.</li>
+            <li>For take-home tasks, keep things simple and well documented.</li>
+          </ul>
+
+          <h2>How Bangalore developers can stand out</h2>
+          <p>
+            Real users and results matter. If you can show features used by real people, performance improvements or automation that saved time — these are great signals. In Bangalore’s competitive market, a clear demo and short explanation often open doors.
+          </p>
+
+          <h2>Summary and final friendly advice</h2>
+          <p>
+            Choose a language that matches your target role and employer type. Focus on fundamentals, ship real projects, and learn the tools around the language (testing, deployment, monitoring). Keep your learning steady and practical — small, consistent wins matter more than occasional marathon sessions.
+          </p>
+
+          <p>
+            If you want, Bangalore Connect can review your resume and suggest which languages and projects will help you land your next role. Visit our <a href="./contact.html">Contact</a> page to reach out.
+          </p>
+
+          <p class="note">
+            Note: The examples above reflect common patterns in Bangalore’s tech ecosystem. For exact job details and openings, always check company career pages and verified job listings.
+          </p>
+
+        </article>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="footer-logo" style="display:flex; gap:12px; align-items:center; text-decoration:none; color:inherit; font-weight:700;">
+            <img src="logo.png" alt="Bangalore Connect Logo" style="width:36px; height:36px; object-fit:contain;" />
+            Bangalore Connect
+          </a>
+
+          <p class="footer-desc">
+            Bangalore Connect is your go-to job portal for finding the best jobs in Bangalore. We connect smart people with top companies, making your career growth easy and efficient. Find verified jobs and move your career forward today.
+          </p>
+
+          <div style="margin-top:10px;">
+            <a href="https://whatsapp.com/channel/0029VbC3pS63gvWSBbw93I19" target="_blank" style="text-decoration:none; margin-right:8px;"><i class="fab fa-whatsapp"></i></a>
+            <a href="tel:9019540558" style="text-decoration:none; margin-right:8px;"><i class="fas fa-phone"></i></a>
+            <a href="https://www.linkedin.com/company/bangalore-connect/" target="_blank" style="text-decoration:none; margin-right:8px;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/bang.aloreconnect/" target="_blank" style="text-decoration:none;"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-column">
+          <h3>For Job Seekers</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="margin-bottom:8px;"><a href="./privacy-policy.html" style="text-decoration:none; color:#123;"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+            <li style="margin-bottom:8px;"><a href="./faqs.html" style="text-decoration:none; color:#123;"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+            <li style="margin-bottom:8px;"><a href="./tandc.html" style="text-decoration:none; color:#123;"><i class="fas fa-chevron-right"></i> Terms & Conditions</a></li>
+            <li style="margin-bottom:8px;"><a href="./report.html" style="text-decoration:none; color:#123;"><i class="fas fa-chevron-right"></i> Report Problem</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:18px; color:var(--muted);">© 2025 Bangalore Connect. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    window.addEventListener("load", () => {
+      document.body.classList.add("loaded");
+    });
+  </script>
+</body>
+</html>

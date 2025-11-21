@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>100 HR Interview Questions & Answers | Ruhan's Guide | Bangalore Connect</title>
+    <meta name="description" content="Master the top 100 HR interview questions for IT jobs in India. Includes sample answers for B.E. CSE candidates like Ruhan from Ballari, focusing on simple, effective communication." />
+    <meta name="keywords" content="HR interview questions, IT jobs India, sample HR answers, B.E. CSE interview, job interview preparation, soft skills for tech, Ruhan Ballari" />
+    <link rel="icon" type="image/png" href="logo.png" sizes="64x64" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+/* --------------------------------------------------------
+| GLOBAL VARIABLES (FOR TEXT COLOR BLACK)
+| -------------------------------------------------------- */
+:root {
+    --primary: #000000; 
+    --primary-dark: #000000;
+    --darker: #1e293b; /* Retain dark background for footer */
+    --lighter: #ffffff;
+    --gray: #000000;
+    --muted: #000000;
+    --page-bg: #ffffff;
+    --content-max-width: 900px;
+    --radius-lg: 12px;
+    --primary-light: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --dark: #000000;
+    --gray-light: #000000;
+    --gray-lighter: #f8fafc;
+    --success: #000000;
+    --gradient: none;
+    --highlight-color: #000000; /* Used for interactive elements */
+}
+
+body {  
+    margin: 0;  
+    font-family: 'Inter','Plus Jakarta Sans',Arial,sans-serif;  
+    background: var(--page-bg);  
+    color: #000000 !important;
+    line-height: 1.75;  
+}
+
+/* Header */
+.logo { color:#000 !important; }
+.logo-title-wrap h1 { color:#000 !important; }
+.tagline { color:#000 !important; }
+
+/* Section */
+.section { padding:100px 0; }
+.section-header { text-align:center; margin-bottom:60px; }
+
+/* Article Titles */
+.article-main-title { 
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:2.5rem;  
+    margin:6px 0 10px;  
+    line-height:1.15;  
+    color:#000 !important;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { color:#000 !important; }
+
+/* Paragraphs */
+p, .footer-desc {
+    text-align:justify !important;
+    margin-bottom:1.5em !important;
+    color:#000 !important;
+}
+
+/* Footer: Background remains dark, text white/light gray for visibility */
+footer {
+    background:var(--darker);
+    color:white !important;
+    padding:30px 0;
+}
+
+.footer-brand .logo { color:white !important; }
+.footer-brand .logo h1 { color:white !important; }
+.footer-desc { color:#eee !important; }
+.footer-links-column h3 { color:white !important; }
+.footer-link { color:#eee !important; }
+.footer-link i { color: #ccc !important; } 
+
+/* --------------------------------------------------------
+| HR Q&A STYLES (NEW)
+| -------------------------------------------------------- */
+
+.qa-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.qa-box {
+    margin-bottom: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--gray-lighter);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+}
+
+.qa-box:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.qa-box details {
+    padding: 0;
+}
+
+.qa-box summary {
+    display: block;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff; 
+    color: var(--dark) !important;
+    border-radius: var(--radius-lg);
+    list-style: none; /* Hide default triangle */
+    position: relative;
+    transition: background 0.2s;
+}
+
+/* Custom arrow style */
+.qa-box summary::after {
+    content: '\25B6'; /* Right-pointing triangle */
+    position: absolute;
+    right: 20px;
+    font-size: 0.8rem;
+    color: var(--highlight-color);
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.qa-box[open] summary {
+    background: #fff; 
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.qa-box[open] summary::after {
+    content: '\25BC'; /* Down-pointing triangle */
+}
+
+.qa-answer {
+    padding: 15px 20px 20px;
+    border-top: 1px solid #e2e8f0;
+    background: var(--gray-lighter);
+    font-size: 1rem;
+    color: #333 !important;
+    text-align: left !important;
+}
+
+.qa-answer p {
+    margin-bottom: 0 !important;
+    text-align: left !important;
+    color: #333 !important;
+    line-height: 1.6;
+}
+
+/* Category styling */
+.qa-category {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Mobile Responsiveness for Q&A boxes */
+@media (max-width: 640px) {
+    .qa-box summary {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    .qa-answer {
+        padding: 12px 15px 15px;
+    }
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3551205878174657"
+     crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="loader">Loading...</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-title-wrap">
+                    <img src="logo.png" alt="Bangalore Connect Logo" class="logo-img">
+                    <h1>Bangalore Connect</h1>
+                </div>
+                <p class="tagline">Connecting Talent with Opportunities</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="./index.html#jobs" class="nav-link">Jobs</a></li>
+                    <li><a href="./Aboutus.html" class="nav-link">About</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<section class="section" style="padding-bottom: 60px;">
+    <div class="container">
+        <div class="section-header" style="margin-bottom: 30px;">
+            <h1 class="article-main-title">Top 100 HR Interview Questions (Ruhan's Answers)</h1>
+        </div>
+
+        <article style="max-width: var(--content-max-width); margin: 0 auto;">
+            <p style="text-align: center; color: #475569 !important; font-size: 1.05rem; margin-bottom: 30px;">
+                This guide includes common interview questions usually asked by HR during job interviews for B.E. CSE graduates. It provides simple and ready-to-use answers that can help you speak clearly and confidently in front of the interviewer. Click on any question below to see the sample answer and prepare better for your next interview.
+            </p>
+        </article>
+        
+        <div class="qa-container">
+            
+            <!-- QUESTION 1: Tell Me About Yourself -->
+            <div class="qa-box">
+                <details>
+                    <summary>1. Tell me about yourself, Ruhan.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Basic Introduction</span>
+                        <p>
+                           My name is Ruhan. I recently completed my B.E. in Computer Science Engineering. During my studies, I learned important topics like data structures, algorithms, and web development. I enjoy practical work, so I focused on my final year project, which was a real-time image processing application. Now, I am looking for a job where I can use my coding skills, learn more, and grow in my career.
+
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 2: Strengths/Weaknesses -->
+            <div class="qa-box">
+                <details>
+                    <summary>2. What would you say is your biggest strength and weakness?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Self-Assessment</span>
+                        <p>
+                            My biggest strength is my problem-solving ability, especially when I face tough coding challenges. I keep trying until I find the best and most efficient solution, which is very important in engineering. If I have to mention a weakness, sometimes I focus too much on the small details of a task. I am working on balancing this careful approach with the need to finish work quickly, especially when working in a fast team, so that I can deliver good results on time.
+
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 3: Why This Company -->
+            <div class="qa-box">
+                <details>
+                    <summary>3. Why do you want to join our company?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Company Knowledge</span>
+                        <p>
+                            I have been following your company’s great work in [mention relevant domain, for example, Cloud Services or Fintech], and I am very impressed by your innovation. I know your work culture encourages continuous learning and values technical skills. This is exactly what I want as a fresh computer science graduate. I believe my knowledge of [mention relevant tools, like Python and Java] fits well with the development projects your team works on.
+
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 4: Where do you see yourself in 5 years? -->
+            <div class="qa-box">
+                <details>
+                    <summary>4. Where do you see yourself in five years?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Career Goals</span>
+                        <p>
+                            "In five years, I aim to be a Subject Matter Expert in a specialized area, maybe in Cloud Architecture or AI development, depending on the role I start in. More importantly, I want to be a trusted senior member of the team here, leading key projects and actively mentoring newer graduates. My goal is steady technical growth within a stable company like yours."
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- QUESTION 5: Teamwork -->
+            <div class="qa-box">
+                <details>
+                    <summary>5. Describe a time you worked well in a team.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Teamwork & Collaboration</span>
+                        <p> "During my final year CSE project, our team faced a major bug in integrating the backend database with the front end. I took the initiative to organize a quick, focused session to trace the data flow. I handled the database query optimization while my teammate handled the API integration. By splitting the work based on our strengths and communicating constantly, we fixed the issue within one evening, allowing us to hit our deadline."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 6: Pressure -->
+            <div class="qa-box">
+                <details>
+                    <summary>6. How do you handle pressure or tight deadlines?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Stress Management</span>
+                        <p>
+                             "I handle pressure by first breaking the task down into smaller, manageable milestones. This stops me from feeling overwhelmed. I then prioritize based on what gives the highest impact first. For instance, before a major submission, I always make sure the core functionality is rock-solid, even if it means sacrificing some minor features for a later release. Clear planning is my main stress reliever."</p>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- QUESTION 7: Leadership -->
+            <div class="qa-box">
+                <details>
+                    <summary>7. Do you prefer to lead or follow?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Adaptability</span>
+                        <p>
+							"I'm comfortable doing either, depending on what the project needs. If I have specific expertise in an area, like my Data Structures knowledge, I step up to lead that part. However, if I’m working with someone who is more experienced in a domain like Cloud, I'm happy to follow their direction closely. I believe successful team members are those who adapt their role to maximize team success."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 8: Failure -->
+            <div class="qa-box">
+                <details>
+                    <summary>8. Tell me about a time you failed and what you learned.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Learning from Mistakes</span>
+                        <p>
+                             "In my second year, I tried to implement a complex sorting algorithm for a university coding contest without properly understanding its memory complexity. The code worked for small inputs but failed drastically for large ones. My failure taught me the critical importance of analyzing time and space complexity first, before jumping into coding. Now, fundamental theory is my first step in every project."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 9: Location -->
+            <div class="qa-box">
+                <details>
+                    <summary>9. You are from Ballari. Are you willing to relocate to Bangalore/other cities?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Relocation & Flexibility</span>
+                        <p>
+                             "Yes, absolutely. While I completed my B.E. in Ballari, I am excited about the opportunities in the major tech hubs. I am fully prepared and willing to relocate to Bangalore or any other city where the company requires me to be. I see relocation as part of starting a dynamic, professional career."</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 10: Salary Expectation -->
+            <div class="qa-box">
+                <details>
+                    <summary>10. What are your salary expectations?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Compensation</span>
+                        <p>
+                            "As a fresh graduate, my priority is the role and the opportunity to learn. I've researched the industry standards for a B.E. CSE Fresher in this city and for this role. Based on my research and my skills, I expect a package that is competitive and fair for the market rate. I am flexible and open to discussing the company's standard offer for this position."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 11: Team Conflict -->
+            <div class="qa-box">
+                <details>
+                    <summary>11. How do you deal with conflict within a team?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Conflict Resolution</span>
+                        <p>
+                            "When conflict arises, I focus on the technical issue, not the person. I always make sure everyone has a chance to explain their viewpoint, and then I try to mediate by focusing on what is best for the project goal. In my final year project, we had a disagreement over language choice (Python vs Java). I suggested we do a small prototype in both to show the performance difference, and the data helped us make an objective decision quickly."
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- QUESTION 12: Hobbies -->
+            <div class="qa-box">
+                <details>
+                    <summary>12. What are your hobbies outside of work?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Personal Interest</span>
+                        <p>
+                            "I really enjoy playing chess because it forces me to think several steps ahead and analyze problems structurally, which actually helps my coding logic. I also spend time learning new concepts on platforms like Coursera, currently focusing on AWS Cloud certifications, to keep my technical edge sharp."
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- QUESTION 13: Technical Challenge -->
+            <div class="qa-box">
+                <details>
+                    <summary>13. Tell us about a major technical challenge you overcame during your B.E.</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Technical Ability</span>
+                        <p>
+                            "The biggest challenge was integrating an external Machine Learning model into a simple web application for my major project. The model needed a specific environment that kept crashing the app server. I overcame this by containerizing the ML model using Docker. This solution separated the environments, stabilized the app, and taught me the value of modern deployment tools."
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- QUESTION 14: Job change / New Job -->
+            <div class="qa-box">
+                <details>
+                    <summary>14. Why are you looking for a change/Why do you want this first job?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Motivation</span>
+                        <p>
+                             "I'm eager to move from the academic environment of my B.E. at Ballari to a professional, industry setting. I want a company where my skills in CSE can be applied to real-world products and where I can be part of a structured training program that develops me into a successful software engineer. Your company offers that perfect blend of mentorship and high-impact work."
+                        </p>
+                    </div>
+                </details>
+            </div>
+            
+            <!-- QUESTION 15: Questions for Interviewer -->
+            <div class="qa-box">
+                <details>
+                    <summary>15. Do you have any questions for us?</summary>
+                    <div class="qa-answer">
+                        <span class="qa-category">Category: Closing the Interview</span>
+                        <p>
+                            "Yes, thank you. I have two questions: 1. Could you describe a typical workday or weekly routine for someone in this specific role? 2. What are the key technical skills the successful candidate will need to master within the first six months here?"
+                        </p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- --- SIMULATED REMAINING QUESTIONS (Q16 - Q100) --- -->
+            
+            <h3 style="text-align: center; margin-top: 40px; margin-bottom: 20px;">Remaining 85 Questions for Practice</h3>
+
+            <!-- Placeholder for Q16 to Q100 -->
+            
+            <!-- Q16 - Q30: Behavioral & Teamwork -->
+            <div class="qa-box"><details><summary>16. How do you prioritize tasks when everything seems urgent?</summary><div class="qa-answer"><span class="qa-category">Category: Prioritization</span><p>I use the impact-effort matrix: high-impact, low-effort tasks first. If deadlines conflict, I communicate clearly with my mentor or manager immediately to get direction.</p></div></details></div>
+            <div class="qa-box"><details><summary>17. Describe your ideal work environment.</summary><div class="qa-answer"><span class="qa-category">Category: Work Style</span><p>My ideal environment is collaborative, technically focused, and promotes continuous learning. A place where my B.E. skills can grow through mentorship.</p></div></details></div>
+            <div class="qa-box"><details><summary>18. How do you ensure accuracy in your work?</summary><div class="qa-answer"><span class="qa-category">Category: Attention to Detail</span><p>I follow a two-step review process: self-testing and cross-checking against requirements before submitting. For code, I always write unit tests.</p></div></details></div>
+            <div class="qa-box"><details><summary>19. What motivates you to perform well?</summary><div class="qa-answer"><span class="qa-category">Category: Motivation</span><p>My biggest motivation is seeing my code or solution successfully deployed and used to solve a real problem. The technical challenge itself drives me.</p></div></details></div>
+            <div class="qa-box"><details><summary>20. Give an example of how you used logic to solve a problem.</summary><div class="qa-answer"><span class="qa-category">Category: Problem Solving</span><p>In my **Data Structures** class, I optimized a search algorithm by switching from linear search to a hash map implementation, reducing complexity from O(n) to O(1).</p></div></details></div>
+            <div class="qa-box"><details><summary>21. How do you handle criticism?</summary><div class="qa-answer"><span class="qa-category">Category: Feedback</span><p>I see criticism as a chance to improve. I listen carefully, clarify the feedback, and immediately plan steps to implement the change, especially technical review comments.</p></div></details></div>
+            <div class="qa-box"><details><summary>22. Describe a goal you set and how you achieved it.</summary><div class="qa-answer"><span class="qa-category">Category: Goal Setting</span><p>My goal was to master Python during the summer holidays. I achieved it by completing a comprehensive online course and building a small web scraper project using the language.</p></div></details></div>
+            <div class="qa-box"><details><summary>23. What types of people do you find difficult to work with?</summary><div class="qa-answer"><span class="qa-category">Category: Interpersonal Skills</span><p>I sometimes struggle with teammates who don't communicate updates regularly. However, I handle it by proactively setting clear, frequent check-in times to ensure alignment.</p></div></details></div>
+            <div class="qa-box"><details><summary>24. Are you willing to work overtime or on weekends?</summary><div class="qa-answer"><span class="qa-category">Category: Work Flexibility</span><p>Yes, I am committed to the project's success. If the situation demands it and the deadlines are tight, I am absolutely willing to put in the extra hours required.</p></div></details></div>
+            <div class="qa-box"><details><summary>25. What did you learn from your college education in Ballari?</summary><div class="qa-answer"><span class="qa-category">Category: Education Background</span><p>My **B.E. in CSE** from **Ballari** gave me a strong foundation in core computer science principles and the discipline needed to manage complex technical projects from start to finish.</p></div></details></div>
+            <div class="qa-box"><details><summary>26. What project are you most proud of?</summary><div class="qa-answer"><span class="qa-category">Category: Technical Achievements</span><p>I'm most proud of my final year project, the image processing application, because it involved combining my AI knowledge with web development, resulting in a fully functioning product.</p></div></details></div>
+            <div class="qa-box"><details><summary>27. How quickly do you adapt to new technology?</summary><div class="qa-answer"><span class="qa-category">Category: Adaptability</span><p>As a CSE graduate, I adapt very quickly. I focus on understanding the underlying concepts first, which helps me quickly pick up the specific syntax or features of any new tool, like I did with **Docker** recently.</p></div></details></div>
+            <div class="qa-box"><details><summary>28. What are your short-term career goals?</summary><div class="qa-answer"><span class="qa-category">Category: Career Goals</span><p>My short-term goal is to absorb as much knowledge as possible in the first year here, master the technology stack of the team, and become a fully reliable and independent contributor.</p></div></details></div>
+            <div class="qa-box"><details><summary>29. What type of manager do you prefer?</summary><div class="qa-answer"><span class="qa-category">Category: Management Style</span><p>I prefer a manager who provides clear direction and high-level goals but allows me the freedom to solve the technical problem my own way. Regular, honest feedback is also important to me.</p></div></details></div>
+            <div class="qa-box"><details><summary>30. If you found a bug in production code, what steps would you take?</summary><div class="qa-answer"><span class="qa-category">Category: Technical Response</span><p>First, verify the bug and its impact. Second, notify the team and manager. Third, prioritize a minimal fix (hotfix) and deploy. Finally, analyze the root cause for a permanent solution.</p></div></details></div>
+            
+            <!-- Q31 - Q45: Attitude & Ethical Questions -->
+            <div class="qa-box"><details><summary>31. What is your understanding of business ethics?</summary><div class="qa-answer"><span class="qa-category">Category: Ethics</span><p>It means being honest, protecting the company's private data, and treating all colleagues and clients with respect and fairness at all times.</p></div></details></div>
+            <div class="qa-box"><details><summary>32. How do you stay updated with tech trends?</summary><div class="qa-answer"><span class="qa-category">Category: Continuous Learning</span><p>I follow tech news sites, subscribe to technical newsletters (like those on AI/ML), and complete online certifications. Currently, I'm focusing on cloud technologies.</p></div></details></div>
+            <div class="qa-box"><details><summary>33. Why did you choose Computer Science Engineering?</summary><div class="qa-answer"><span class="qa-category">Category: Career Choice</span><p>I chose CSE because I enjoy the logic and problem-solving involved in creating something from scratch using code. It's challenging and always evolving.</p></div></details></div>
+            <div class="qa-box"><details><summary>34. What is your biggest career risk?</summary><div class="qa-answer"><span class="qa-category">Category: Risk Assessment</span><p>The biggest risk now is not choosing a job that challenges me enough. I want a role with complex tasks so I can continue to grow my skills rapidly.</p></div></details></div>
+            <div class="qa-box"><details><summary>35. What does success mean to you?</summary><div class="qa-answer"><span class="qa-category">Category: Personal Philosophy</span><p>Success means delivering solutions that meaningfully help users or the business, and continuously growing my technical expertise while doing so.</p></div></details></div>
+            <div class="qa-box"><details><summary>36. How do you react if you don't know the answer to a question?</summary><div class="qa-answer"><span class="qa-category">Category: Honesty</span><p>I would admit I don't know the answer immediately, but I would explain how I would approach finding it—by searching documentation, asking experts, or running tests.</p></div></details></div>
+            <div class="qa-box"><details><summary>37. Are you a detail-oriented person?</summary><div class="qa-answer"><span class="qa-category">Category: Work Style</span><p>Yes, especially in code. I ensure variables are named correctly, comments are useful, and all edge cases are tested. I believe in clean code first.</p></div></details></div>
+            <div class="qa-box"><details><summary>38. How do you handle repetitive tasks?</summary><div class="qa-answer"><span class="qa-category">Category: Efficiency</span><p>If a task is repetitive, I look for ways to automate it using scripting (like Python) or using existing automation tools, which saves time and prevents human error.</p></div></details></div>
+            <div class="qa-box"><details><summary>39. Who is your role model?</summary><div class="qa-answer"><span class="qa-category">Category: Inspiration</span><p>My role model is [mention a technical person, e.g., Satya Nadella or a professor]. I admire their focus on long-term strategy and consistent innovation in a competitive field.</p></div></details></div>
+            <div class="qa-box"><details><summary>40. Why should we hire you over other candidates?</summary><div class="qa-answer"><span class="qa-category">Category: Differentiation</span><p>You should hire me because I offer a unique combination of strong CSE fundamentals from **Ballari** and practical project experience in [mention AI/Web]. I am highly motivated and quick to learn your specific stack.</p></div></details></div>
+            <div class="qa-box"><details><summary>41. What is your long-term goal for your career?</summary><div class="qa-answer"><span class="qa-category">Category: Long-Term Vision</span><p>To become a recognized technical architect in the industry, guiding technical strategy and building scalable, reliable systems for a major company like yours.</p></div></details></div>
+            <div class="qa-box"><details><summary>42. What are your key values?</summary><div class="qa-answer"><span class="qa-category">Category: Personal Values</span><p>Integrity, continuous learning, and teamwork. These values guide my approach to every project and collaboration.</p></div></details></div>
+            <div class="qa-box"><details><summary>43. Do you prefer working remotely or in the office?</summary><div class="qa-answer"><span class="qa-category">Category: Work Arrangement</span><p>I prefer working in the office initially. As a fresher, I believe hands-on learning and in-person collaboration accelerate my growth, but I am comfortable with hybrid arrangements.</p></div></details></div>
+            <div class="qa-box"><details><summary>44. How do you define a good leader?</summary><div class="qa-answer"><span class="qa-category">Category: Leadership Definition</span><p>A good leader is someone who inspires the team, removes obstacles, and clearly defines the 'what' and 'why' while trusting the team to handle the 'how.'</p></div></details></div>
+            <div class="qa-box"><details><summary>45. What are your thoughts on job rotation/trying different teams?</summary><div class="qa-answer"><span class="qa-category">Category: Flexibility</span><p>I think it’s a great way to learn. I am open to job rotation, especially if it helps me understand different parts of the product lifecycle and grow my overall technical profile.</p></div></details></div>
+
+            <!-- Q46 - Q60: Hypothetical & Behavioral -->
+            <div class="qa-box"><details><summary>46. If you saw a coworker struggling, what would you do?</summary><div class="qa-answer"><span class="qa-category">Category: Empathy & Support</span><p>I would quietly ask if they need help and offer my time to assist them in troubleshooting the issue, focusing on collaborative problem-solving.</p></div></details></div>
+            <div class="qa-box"><details><summary>47. What makes a project interesting to you?</summary><div class="qa-answer"><span class="qa-category">Category: Project Interest</span><p>Projects that involve new technology or require complex algorithmic solutions are the most interesting to me, as they push my skills further.</p></div></details></div>
+            <div class="qa-box"><details><summary>48. How do you handle unexpected setbacks?</summary><div class="qa-answer"><span class="qa-category">Category: Resilience</span><p>I pause, analyze why the setback happened, inform the relevant parties, and then immediately focus on creating an action plan to fix it, learning along the way.</p></div></details></div>
+            <div class="qa-box"><details><summary>49. What non-technical skill is most important for a software engineer?</summary><div class="qa-answer"><span class="qa-category">Category: Soft Skills</span><p>Clear communication. We have to clearly explain complex technical ideas to non-technical people and document our code for future teammates.</p></div></details></div>
+            <div class="qa-box"><details><summary>50. How do you manage your finances/money?</summary><div class="qa-answer"><span class="qa-category">Category: Finance & Responsibility</span><p>I budget carefully and prioritize saving a portion of my income. I am responsible with my finances and believe in living within my means.</p></div></details></div>
+            <div class="qa-box"><details><summary>51. What is the difference between hard work and smart work?</summary><div class="qa-answer"><span class="qa-category">Category: Work Ethic</span><p>Hard work is putting in hours; smart work is finding the most efficient method (often through automation or better design) to reduce those hours. I aim for smart work.</p></div></details></div>
+            <div class="qa-box"><details><summary>52. How do you handle stress when deadlines are near?</summary><div class="qa-answer"><span class="qa-category">Category: Stress Management</span><p>I stick to my priorities and avoid distractions. Music and a short walk help me reset my mind if I feel overwhelmed, then I return to the problem with fresh eyes.</p></div></details></div>
+            <div class="qa-box"><details><summary>53. Are you a morning person or a night owl?</summary><div class="qa-answer"><span class="qa-category">Category: Preference</span><p>I generally prefer morning work, as my best coding happens when the day starts fresh, but I am flexible to adjust to the team's core hours.</p></div></details></div>
+            <div class="qa-box"><details><summary>54. What are your views on continuous learning in the IT field?</summary><div class="qa-answer"><span class="qa-category">Category: Learning Commitment</span><p>It's non-negotiable. Technology changes every 1-2 years, so continuous learning is essential for survival and growth, which I already prioritize through online courses.</p></div></details></div>
+            <div class="qa-box"><details><summary>55. How do you motivate an underperforming teammate?</summary><div class="qa-answer"><span class="qa-category">Category: Team Support</span><p>I'd talk to them privately to understand the root cause. I'd then offer specific help, maybe pairing up to solve the difficult part of the task together.</p></div></details></div>
+            <div class="qa-box"><details><summary>56. What is the most challenging aspect of your major project?</summary><div class="qa-answer"><span class="qa-category">Category: Project Deep Dive</span><p>Data cleaning for my AI project was the hardest part. The input data was messy, so I had to spend a significant amount of time writing scripts to standardize and validate it before training the model.</p></div></details></div>
+            <div class="qa-box"><details><summary>57. Tell us about a time you had to persuade someone.</summary><div class="qa-answer"><span class="qa-category">Category: Persuasion</span><p>I persuaded my B.E. team to use Git for version control, even though they preferred file sharing. I demonstrated how Git prevents irreversible mistakes, and they quickly adopted the tool.</p></div></details></div>
+            <div class="qa-box"><details><summary>58. What makes a company great?</summary><div class="qa-answer"><span class="qa-category">Category: Company Culture</span><p>A great company has a clear vision, values its employees' contributions, and invests in its technology and the growth of its technical staff.</p></div></details></div>
+            <div class="qa-box"><details><summary>59. How would you handle a demanding client or user?</summary><div class="qa-answer"><span class="qa-category">Category: Customer Service</span><p>I would listen carefully to their needs, manage their expectations clearly by setting realistic timelines, and provide regular updates to build trust and ensure satisfaction.</p></div></details></div>
+            <div class="qa-box"><details><summary>60. Why did you choose B.E. over other degrees?</summary><div class="qa-answer"><span class="qa-category">Category: Education Choice</span><p>B.E. provides a deep, engineering-focused approach to problem-solving, which I preferred over a more theoretical or general B.Sc. degree. It directly prepares you for the industry.</p></div></details></div>
+
+            <!-- Q61 - Q75: Personal & Situational -->
+            <div class="qa-box"><details><summary>61. What is your short-term weakness, and how are you fixing it?</summary><div class="qa-answer"><span class="qa-category">Category: Self-Improvement</span><p>Public speaking is a minor weakness. I'm actively fixing it by volunteering to present my project work during college seminars and practicing delivery to build confidence.</p></div></details></div>
+            <div class="qa-box"><details><summary>62. How would you introduce yourself in one minute?</summary><div class="qa-answer"><span class="qa-category">Category: Quick Pitch</span><p>I'm Ruhan, a recent CSE graduate from Ballari. My passion is applying logic, proven by my skills in Data Structures and Python. I'm looking for a developer role where I can immediately contribute to your team's success.</p></div></details></div>
+            <div class="qa-box"><details><summary>63. Give an example of your resourcefulness.</summary><div class="qa-answer"><span class="qa-category">Category: Initiative</span><p>When our team couldn't afford specific software, I found an open-source alternative (like using TensorFlow instead of a commercial AI tool) and quickly learned to implement it, saving project costs.</p></div></details></div>
+            <div class="qa-box"><details><summary>64. What do you consider the biggest achievement of your life so far?</summary><div class="qa-answer"><span class="qa-category">Category: Major Achievement</span><p>Successfully completing my B.E. degree while managing a complex final year project and securing an **A grade** in all core CSE subjects. It showed I can manage high pressure and technical difficulty.</p></div></details></div>
+            <div class="qa-box"><details><summary>65. What kind of salary growth do you expect in the next few years?</summary><div class="qa-answer"><span class="qa-category">Category: Compensation Vision</span><p>I expect my salary to be a reflection of my rapidly increasing technical value to the company. I am confident that as I take on bigger responsibilities, my compensation will grow accordingly.</p></div></details></div>
+            <div class="qa-box"><details><summary>66. How important is money to you?</summary><div class="qa-answer"><span class="qa-category">Category: Motivation</span><p>Money is important as it provides stability, but it's not the primary motivator. The challenge, the work culture, and the growth opportunities are more important than the initial package.</p></div></details></div>
+            <div class="qa-box"><details><summary>67. Tell me something unique about yourself.</summary><div class="qa-answer"><span class="qa-category">Category: Personality</span><p>I don't just code; I also enjoy reading about the history of technology, especially how early computing problems were solved without modern tools. It gives me a deeper appreciation for the fundamentals.</p></div></details></div>
+            <div class="qa-box"><details><summary>68. What are your preferred programming languages?</summary><div class="qa-answer"><span class="qa-category">Category: Technical Preference</span><p>Python is my go-to for speed and data tasks, and Java for building robust enterprise-level applications. I also have a strong base in C++ from my B.E. coursework.</p></div></details></div>
+            <div class="qa-box"><details><summary>69. Describe a time you had to change your approach mid-project.</summary><div class="qa-answer"><span class="qa-category">Category: Adaptability Example</span><p>We realized the database we chose for our project was too slow for real-time data access. We stopped, migrated the data structure to a NoSQL database, and the project performance improved dramatically.</p></div></details></div>
+            <div class="qa-box"><details><summary>70. How do you handle failure in a team setting?</summary><div class="qa-answer"><span class="qa-category">Category: Team Failure</span><p>I take collective responsibility, avoid blaming, and immediately focus on analyzing the failure with the team to identify lessons and ensure it doesn't happen again.</p></div></details></div>
+            <div class="qa-box"><details><summary>71. Do you prefer working alone or with a team?</summary><div class="qa-answer"><span class="qa-category">Category: Work Preference</span><p>I enjoy teamwork for brainstorming and critical decision-making, but I prefer working alone on the actual coding phase to maximize my focus and efficiency.</p></div></details></div>
+            <div class="qa-box"><details><summary>72. What are your expectations from your manager?</summary><div class="qa-answer"><span class="qa-category">Category: Manager Expectation</span><p>I expect clear performance goals, honest and frequent feedback, and trust in my technical decision-making once I prove myself in the role.</p></div></details></div>
+            <div class="qa-box"><details><summary>73. What is the difference between job satisfaction and career growth?</summary><div class="qa-answer"><span class="qa-category">Category: Career Definition</span><p>Job satisfaction is enjoying the day-to-day tasks. Career growth is moving into larger roles and mastering more complex technical skills over time. I want both.</p></div></details></div>
+            <div class="qa-box"><details><summary>74. Do you have any prior internship experience?</summary><div class="qa-answer"><span class="qa-category">Category: Internship</span><p>Yes, I completed a three-month internship focused on **web development** where I worked on optimizing the frontend performance of a small e-commerce site using React.</p></div></details></div>
+            <div class="qa-box"><details><summary>75. What are your three most valuable technical skills?</summary><div class="qa-answer"><span class="qa-category">Category: Core Skills</span><p>My top three are: **Data Structures and Algorithms (DSA)**, **Python/Java programming**, and basic **Cloud** knowledge (AWS/Azure fundamentals).</p></div></details></div>
+
+            <!-- Q76 - Q100: Miscellaneous & Review -->
+            <div class="qa-box"><details><summary>76. If hired, how will you spend your first 90 days?</summary><div class="qa-answer"><span class="qa-category">Category: Onboarding Plan</span><p>The first 30 days will be focused on learning the product and the codebase. The next 60 will be spent taking ownership of a small, valuable task to prove my capability and integration.</p></div></details></div>
+            <div class="qa-box"><details><summary>77. What is your ideal team size?</summary><div class="qa-answer"><span class="qa-category">Category: Team Structure</span><p>I prefer a medium-sized team of around 5-8 people. It's large enough for diverse opinions but small enough to ensure effective, direct communication.</p></div></details></div>
+            <div class="qa-box"><details><summary>78. How do you define a 'good code'?</summary><div class="qa-answer"><span class="qa-category">Category: Technical Definition</span><p>Good code is readable, maintainable, efficient (high performance), and well-tested. If a new person can understand it quickly, it's good code.</p></div></details></div>
+            <div class="qa-box"><details><summary>79. What do you know about our company's competitors?</summary><div class="qa-answer"><span class="qa-category">Category: Industry Knowledge</span><p>I know [Competitor A] and [Competitor B] are strong, but your company is leading in [mention specific tech area] due to your focus on [mention company strength]. That competitive edge attracts me.</p></div></details></div>
+            <div class="qa-box"><details><summary>80. Are you looking for a short-term or long-term engagement?</summary><div class="qa-answer"><span class="qa-category">Category: Commitment</span><p>I am looking for a long-term career opportunity. I want to grow within this company and see myself contributing here for many years.</p></div></details></div>
+            <div class="qa-box"><details><summary>81. How would your college professors describe you?</summary><div class="qa-answer"><span class="qa-category">Category: External View</span><p>They would describe me as disciplined, highly curious, and focused. They often appreciated my deep dive into the theoretical concepts of **CSE** beyond the surface level.</p></div></details></div>
+            <div class="qa-box"><details><summary>82. If you had unlimited budget, what project would you build?</summary><div class="qa-answer"><span class="qa-category">Category: Vision</span><p>I would build a massive, open-source AI platform to provide free, high-quality, personalized education to every student in India, bridging the learning gap using personalized algorithms.</p></div></details></div>
+            <div class="qa-box"><details><summary>83. What is the full form of B.E. and CSE?</summary><div class="qa-answer"><span class="qa-category">Category: Basic Check</span><p>B.E. stands for **Bachelor of Engineering**, and CSE stands for **Computer Science Engineering**.</p></div></details></div>
+            <div class="qa-box"><details><summary>84. What tools do you use for version control?</summary><div class="qa-answer"><span class="qa-category">Category: Technical Tools</span><p>I use **Git** and **GitHub/GitLab** extensively. I am comfortable with branching, merging, and resolving conflicts.</p></div></details></div>
+            <div class="qa-box"><details><summary>85. What do you do if a project fails right before the deadline?</summary><div class="qa-answer"><span class="qa-category">Category: Crisis Management</span><p>I wouldn't hide it. I would immediately inform the manager with a clear status update, explain the issue, and propose a viable Plan B (like rolling back or extending the deadline) as quickly as possible.</p></div></details></div>
+            <div class="qa-box"><details><summary>86. Do you consider yourself creative?</summary><div class="qa-answer"><span class="qa-category">Category: Creativity</span><p>Yes, especially in finding creative, elegant solutions to technical problems. Creativity in coding means writing less code that does more work efficiently.</p></div></details></div>
+            <div class="qa-box"><details><summary>87. What is the most exciting thing happening in technology right now?</summary><div class="qa-answer"><span class="qa-category">Category: Tech Trends</span><p>The convergence of **AI and Edge Computing** is most exciting—using powerful AI models directly on small devices, making smart applications faster and more private.</p></div></p></div></details></div>
+            <div class="qa-box"><details><summary>88. How important is cultural fit?</summary><div class="qa-answer"><span class="qa-category">Category: Culture</span><p>It's very important. I seek a culture where hard work is recognized, and collaboration is valued, which I believe is what your company offers.</p></div></details></div>
+            <div class="qa-box"><details><summary>89. Tell me about the place you studied—Ballari.</summary><div class="qa-answer"><span class="qa-category">Category: Personal Background</span><p>Ballari is a city with a strong educational environment. My college there provided me with the dedicated space and quality teaching needed to focus entirely on my B.E. curriculum.</p></div></details></div>
+            <div class="qa-box"><details><summary>90. What are the key takeaways from your most difficult subject?</summary><div class="qa-answer"><span class="qa-category">Category: Subject Knowledge</span><p>Operating Systems was tough, but it taught me about concurrency, memory management, and how to write efficient, thread-safe code—critical lessons for any serious software role.</p></div></details></div>
+            <div class="qa-box"><details><summary>91. What makes you angry?</summary><div class="qa-answer"><span class="qa-category">Category: Emotional Control</span><p>I don't get angry easily. However, what frustrates me is repeated mistakes caused by poor communication or lack of attention to detail, but I channel that frustration into finding a systematic fix.</p></div></details></div>
+            <div class="qa-box"><details><summary>92. Do you have any pending backlogs or academic issues?</summary><div class="qa-answer"><span class="qa-category">Category: Academic Status</span><p>No, I cleared all my **B.E. CSE** papers from **Ballari** in the first attempt. My academic record is clean and reflects my consistent effort.</p></div></details></div>
+            <div class="qa-box"><details><summary>93. How do you measure your performance?</summary><div class="qa-answer"><span class="qa-category">Category: Performance Metrics</span><p>I measure my performance by two factors: the quality (low bug rate) and the speed (on-time delivery) of my code, and the positive feedback I receive from my team members.</p></div></details></div>
+            <div class="qa-box"><details><summary>94. What is the ideal product for you to work on?</summary><div class="qa-answer"><span class="qa-category">Category: Product Fit</span><p>A product that handles large-scale data and has a direct impact on many users. For example, a reliable cloud service or a high-traffic banking application.</p></div></details></div>
+            <div class="qa-box"><details><summary>95. What are your expectations from this job?</summary><div class="qa-answer"><span class="qa-category">Category: Job Expectation</span><p>I expect structured technical training, mentorship from senior engineers, and the opportunity to contribute code to the main codebase very early on.</p></div></details></div>
+            <div class="qa-box"><details><summary>96. Tell us a funny story about yourself or your college life.</summary><div class="qa-answer"><span class="qa-category">Category: Icebreaker (Optional)</span><p>Once, while debugging code until 3 AM in the lab, I accidentally left a print statement that outputted my college ID number 10,000 times to the console, crashing the entire system just before dawn. It was fixed quickly, but the warning message was legendary!</p></div></details></div>
+            <div class="qa-box"><details><summary>97. Why do you look so nervous?</summary><div class="qa-answer"><span class="qa-category">Category: Handling Pressure</span><p>I am eager, not nervous. I respect this opportunity greatly, and my focus is fully on delivering the best possible answers to show my fit for this challenging role.</p></div></details></div>
+            <div class="qa-box"><details><summary>98. If you won the lottery today, would you still work?</summary><div class="qa-answer"><span class="qa-category">Category: Motivation Check</span><p>Yes, I would. I don't work just for the money; I work because I enjoy the technical challenge of building things. I would continue coding, maybe even starting my own tech project!</p></div></details></div>
+            <div class="qa-box"><details><summary>99. What are your views on automation?</summary><div class="qa-answer"><span class="qa-category">Category: Automation</span><p>Automation is essential. It frees up engineering time to focus on complex problem-solving rather than repetitive tasks. I always look for ways to automate testing and deployment workflows.</p></div></details></div>
+            <div class="qa-box"><details><summary>100. Rate yourself as a professional on a scale of 1 to 10.</summary><div class="qa-answer"><span class="qa-category">Category: Self-Rating</span><p>I'd rate myself an **8 out of 10**. I have strong fundamentals, passion, and the drive to contribute from day one. The remaining 2 points are for the experience I will gain working with your senior teams here.</p></div></details></div>
+        </div>
+    </div>
+</section>
+
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo" style="display:flex; align-items:center; gap:10px; color: white;">
+                        <img src="logo.png" alt="Bangalore Connect Logo" style="width:36px; height:36px; object-fit:contain;" />
+                        Bangalore Connect
+                    </a>
+                    <p class="footer-desc" style="text-align: justify;">
+                        Bangalore Connect is your go-to job portal for finding the best jobs in Bangalore. We connect Smart People with top companies, making your career growth easy and efficient. Find verified jobs and move your career forward today.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029VbC3pS63gvWSBbw93I19" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:9019540558" class="social-link"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/company/bangalore-connect/ " class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bang.aloreconnect/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">For Job Seekers</h3>
+                    <ul class="footer-links">
+                        <li><a href="./privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="./faqs.html" class="footer-link"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="./tandc.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms and Conditions</a></li>
+                        <li><a href="./report.html" class="footer-link"><i class="fas fa-chevron-right"></i> Report Problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                    </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script> window.addEventListener('load', () => document.body.classList.add('loaded')); </script>
+</body>
+</html>

@@ -1,0 +1,1805 @@
+/*
+|==========================================================================
+| GLOBAL VARIABLES (CSS Custom Properties)
+|==========================================================================
+*/
+
+:root {
+    --primary: #00b4d8; /* Fresh ocean blue */
+    --primary-dark: #0077b6; /* Deep blue */
+    --primary-light: #90e0ef; /* Soft sky blue */
+    --secondary: #ff6b6b; /* Coral red for contrast */
+    --accent: #ffd166; /* Warm yellow accent - NOTE: Not used in provided HTML, kept for consistency */
+    --dark: #1b263b; /* Navy dark */
+    --darker: #0d1b2a; /* Deeper navy */
+    --light: #f8f9fa; /* Light gray-white */
+    --lighter: #ffffff; /* Pure white */
+    --gray: #6c757d; /* Neutral gray */
+    --gray-light: #dee2e6; /* Soft gray */
+    --gray-lighter: #f1f3f5; /* Very light gray */
+    --success: #06d6a0; /* Mint green */
+    --warning: #f4a261; /* Warm orange - NOTE: Not used in provided HTML, kept for consistency */
+    --error: #e63946; /* Soft red - NOTE: Not used in provided HTML, kept for consistency */
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 40px -10px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/*
+|==========================================================================
+| CORE / UTILITY STYLES
+|==========================================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--dark);
+    line-height: 1.6;
+    background-color: var(--light);
+    overflow-x: hidden;
+    /* Ensure content starts below the fixed header */
+    padding-top: 80px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+input, select, button, textarea {
+    font-family: inherit; /* inherit from body */
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Base padding for desktop/tablet */
+    padding: 0 20px;
+}
+.section {
+    margin-top: 0;           /* remove top space */
+    padding-top: 20px;       /* reduce top padding (adjust as you like) */
+    padding-bottom: 40px;
+    /* MODIFIED: Set the background color to white (using the defined lighter variable) */
+    background-color: var(--lighter); 
+}
+.section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--darker);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    color: var(--gray);
+    max-width: 600px;
+    margin: 30px auto 0;
+    font-size: 1.1rem;
+}
+
+/* --- Loader --- */
+
+#loader {
+    position: fixed;
+    inset: 0;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+    z-index: 9999;
+}
+
+body.loaded #loader {
+    display: none;
+}
+
+/*
+
+nav bar 
+*/
+/* --- Basic Desktop Styles (Larger Screens) --- */
+
+/* Ensures the full menu is visible */
+.nav-container nav {
+    display: block; /* Or flex, depending on your layout */
+}
+
+/* Ensures the menu list is visible */
+.nav-menu {
+    display: flex; /* Display horizontally */
+    list-style: none;
+    /* Add padding/margin/gap to separate links */
+}
+
+/* Hides the mobile menu icon/toggle on desktop */
+.menu-toggle {
+    display: none;
+}
+
+
+/* --- Mobile Styles (Screens up to 768px - common breakpoint) --- */
+@media (max-width: 768px) {
+    .nav-container {
+        /* Adjust layout for mobile, maybe make it flex and space-between */
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hides the navigation list by default on mobile */
+    .nav-menu {
+        display: none;
+        flex-direction: column; /* Stacks links vertically */
+        position: absolute;
+        top: 60px; /* Adjust this to sit below your header/logo */
+        left: 0;
+        width: 100%;
+        background-color: #0a3d62; /* Background color for the dropdown menu */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        padding: 10px 0; /* Add some vertical padding */
+    }
+
+    /* Shows the navigation list when the 'active' class is added by JavaScript */
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* Shows the mobile menu icon/toggle */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff; /* Choose a color that stands out */
+    }
+
+    /* Styles for the individual links in the mobile menu */
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+    .nav-menu .nav-link {
+        display: block;
+        padding: 10px 20px;
+        color: white; /* Text color */
+    }
+}
+
+/*
+|==========================================================================
+| BUTTON STYLES
+|==========================================================================
+*/
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: var(--gradient);
+    color: white;
+    border-radius: var(--radius);
+    font-weight: 600;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+    transition: var(--transition);
+    z-index: -1;
+}
+
+.btn:hover::before {
+    width: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-accent {
+    background-color: white;
+    color: var(--darker);
+    font-weight: 30px;
+}
+
+.btn-accent::before {
+    background: #db2777; /* A deep pink/fuchsia color */
+}
+
+/*
+|==========================================================================
+| HEADER & NAVIGATION STYLES (Fixed, Visible Header)
+|==========================================================================
+*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    transition: var(--transition);
+    /* Ensure no residual transform from previous attempts */
+    transform: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column; /* Stacks logo title/tagline vertically */
+    align-items: flex-start; /* Keeps logo content left-aligned */
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-title-wrap {
+    display: flex;
+    align-items: center; /* Vertically centers the image and the text */
+}
+
+.logo-img {
+    height: 40px;
+    width: 40px; /* adjusted for logo styling */
+    margin-right: 10px; /* Space between icon and text */
+    border-radius: 8px; /* optional */
+}
+
+.logo-title-wrap h1 {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #000;
+}
+
+.tagline {
+    margin-top: 0px;
+    margin-left: 50px; /* Align with the start of the title text */
+    font-size: 0.8em;
+    color: #000;
+}
+
+
+.nav-menu {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none; /* Hidden on desktop */
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    position: relative;
+    z-index: 1001; /* Ensure it's above the menu */
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: var(--dark);
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+    top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+    top: 16px;
+}
+
+.hamburger.open span:nth-child(1) {
+    top: 8px;
+    transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+    top: 8px;
+    transform: rotate(-135deg);
+}
+
+/* Base: Desktop Layout */
+.nav-menu {
+    display: flex; /* Display horizontally on desktop */
+}
+
+/* Hide desktop menu items and show the toggle button on mobile */
+@media (max-width: 768px) {
+    .nav-menu {
+        /* This hides the menu by default on mobile */
+        display: none; 
+        flex-direction: column; 
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+    
+    /* When the menu is open (using JavaScript to toggle a class like 'menu-open') */
+    .nav-menu.menu-open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block; /* Show the hamburger icon */
+    }
+}
+/* Default: Desktop/Tablet (e.g., 3 columns) */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Example: 3 columns */
+    gap: 20px;
+}
+
+/* Mobile Layout: Force to 1 Column */
+@media (max-width: 600px) {
+    .jobs-grid {
+        grid-template-columns: 1fr; /* Stack all jobs vertically */
+    }
+    .job-card {
+        padding: 15px; /* Adjust padding for better look */
+    }
+    .job-details {
+        /* Ensure job details (location, time, degree) wrap nicely */
+        display: flex;
+        flex-wrap: wrap; 
+    }
+    .job-detail {
+        /* Give each detail item space */
+        flex: 1 1 50%; /* Allows 2 items per row */
+        margin-bottom: 5px;
+    }
+}
+
+/* Default: 3 columns for desktop */
+.features-grid, .resume-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Mobile Layout: 2 Columns for Tablets, 1 Column for Phones */
+@media (max-width: 992px) { /* Tablet view */
+    .features-grid, .resume-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) { /* Phone view */
+    .features-grid, .resume-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/*
+|==========================================================================
+| HERO SECTION STYLES
+|==========================================================================
+*/
+
+.hero {
+    padding: 70px 0 100px;
+    
+    /* MODIFIED: Set background to white, removing the image */
+    background: var(--lighter); /* Uses the CSS variable for pure white */
+    
+    /* MODIFIED: Change the text color to black/dark for contrast on the white background */
+    color: var(--darker); 
+    
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    border-radius: 10px; 
+    display: flex; 
+    align-items: center; /* MODIFIED: Center the content */
+    justify-content: center;
+    text-align: center;
+}
+
+.hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.hero-title {
+    color: black; /* Changed to white for contrast on dark overlay */
+    -webkit-text-stroke: 0.2px black; /* Thin border for better definition */
+    text-stroke: 0.5px black;
+    font-weight: 60;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    border-radius: 5px;
+    word-spacing: 5px;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 40px;
+    color: black; /* Changed to white for contrast */
+    font-weight: 300; /* Increased weight for visibility */
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn1 {
+    background: #ffffff;
+    color: #000000;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.40);
+}
+
+
+
+
+.btn2 {
+    background: #000;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    
+
+}
+
+
+
+
+/*
+|==========================================================================
+| FEATURED JOBS SECTION STYLES
+|==========================================================================
+*/
+
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 0px;
+}
+
+
+.section {
+    margin-top: 0;          /* remove top space */
+    padding-top: 20px;      /* reduce top padding (adjust as you like) */
+    padding-bottom: 40px;
+}
+.job-card {
+    background: var(--lighter);
+    border: 1px solid var(--gray-light);
+    padding: 25px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.job-header {
+    display: flex;
+    justify-content: flex-end; /* Align job-meta to the right */
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.job-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.job-company {
+    font-size: 1rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.job-details {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.job-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.job-detail span {
+    font-size: 0.95rem;
+    color: var(--dark);
+}
+
+.job-type {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Job Type Colors (Updated to use defined colors) */
+
+.job-type.remote {
+    background: var(--accent);
+    color: var(--darker);
+} /* Changed to use accent */
+
+.job-type.hybrid {
+    background: var(--secondary);
+}
+
+.job-type.in-office {
+    background: var(--success);
+}
+
+
+.job-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.job-salary {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.job-footer .btn {
+    /* Override to fit smaller job card */
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+}
+
+/* --- New CSS for the Downward Expansion Effect --- */
+
+.job-card {
+    /* Existing styles remain... */
+    transition: all 0.3s ease-in-out; /* Smoother overall card transition */
+    /* ... other styles */
+}
+
+/* * 1. Define the expansion section
+ * Initially, set max-height to 0 and hide overflow.
+ */
+.job-expansion {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding-top 0.4s ease-out;
+}
+
+/* * 2. Define the content and styling for the expanded view
+ */
+.expansion-separator {
+    border: 0;
+    border-top: 1px solid var(--gray-light);
+    margin: 15px 0;
+    opacity: 0.7;
+}
+
+.expansion-subtitle {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.job-expansion p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.expansion-meta span {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+
+
+/* * 3. The Hover Effect: Show the content
+ * Set max-height to a large value to allow the content to show.
+ */
+.job-card:hover .job-expansion {
+    max-height: 500px; /* Needs to be larger than the content's actual height */
+    padding-bottom: 15px; /* Add some padding at the bottom for spacing */
+}
+
+/* Ensure the Apply button section also has a smooth transition */
+.job-footer {
+    transition: padding-top 0.4s ease-out;
+}
+
+/*
+|==========================================================================
+| ARTICLES SECTION STYLES
+|==========================================================================
+*/
+
+.articles-section {
+    /* Consolidated and updated styles: */
+    
+    /* FIX: Set padding-bottom to 0 to remove space at the end of the section. */
+    padding-top: 0;   /* Keeps the top space removed, as per your earlier instruction */
+    padding-bottom: 30px; /* <<< KEY CHANGE: Removes space after the section */
+    padding-left: 0;  /* Standard practice, assuming container handles horizontal padding */
+    padding-right: 0; /* Standard practice, assuming container handles horizontal padding */
+    
+    background-color: #f9f9f9;
+    text-align: center;
+    
+    margin-top: 0; /* Ensures no margin space is added either */
+}
+
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.article-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: left; /* Aligned content left for readability */
+}
+
+.article-card:hover {
+    transform: translateY(-5px);
+    border-color: #333;
+    box-shadow: 0 9px 20px #000000;
+}
+
+.article-title {
+    font-size: 1.25rem;
+    color: #000;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: border-bottom 0.3s ease;
+}
+
+.article-card:hover .article-title {
+    border-bottom: 1px solid #000;
+}
+
+.article-desc {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    max-height: 60px; /* Initial height for ellipsis effect */
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.article-card:hover .article-desc {
+    max-height: 300px; /* Expands on hover */
+}
+
+
+/*
+|==========================================================================
+| RESUME TEMPLATES (ATS) SECTION STYLES - MODIFIED
+|==========================================================================
+*/
+
+.section-title1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    color: var(--darker);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.resume-section {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background: var(--lighter);
+    text-align: center;
+}
+
+.resume-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding-top: 40px;
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+
+.ats-content-only {
+    background: #fff;
+    border: 1px solid var(--gray-light);
+    padding: 30px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* Adjusted shadow for modern look */
+    transition: var(--transition); /* Add transition for hover effect */
+}
+
+/* Optional: Add hover effect to the card itself for better visual appeal */
+.ats-content-only:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.ats-header-text .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+}
+
+
+.ats-header-text .section-title::after {
+    content: none;
+}
+
+
+.ats-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px; /* Increased space below points for button */
+}
+
+
+.ats-points li {
+    font-size: 0.95rem;
+    color: var(--dark);
+    margin: 8px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+
+.ats-points li::before {
+    content: '•'; /* Changed to a standard bullet point */
+    color: var(--primary-dark); /* Changed color to better match site primary */
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* * Key Change: Overriding the .btn-accent class and adding styling to .resume-cta
+* to match the look and feel of the main .btn class.
+*/
+.btn-accent {
+    /* Reset background and color to match the primary button */
+    background: var(--gradient) !important; 
+    color: white !important; 
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    width: 100%; /* Make the button full width of the card */
+    padding: 14px 32px !important;
+    border-radius: var(--radius) !important;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* We don't need to define a separate ::before for .btn-accent if we ensure .btn styles apply */
+/* Re-check if .btn-accent is needed at all, or if we can just use .btn and .resume-cta */
+
+.resume-cta {
+    /* Ensure the button inherits the full style from .btn if possible. */
+    /* By adding the .btn class directly to the HTML, we can achieve this easily. */
+    /* Since you asked to use existing classes, we'll redefine the accent button: */
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.btn-accent::before {
+    /* Re-purposing the ::before to match the primary button's hover effect */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+    transition: var(--transition);
+    z-index: -1;
+    /* Ensure the icon color remains white on hover */
+    color: white;
+}
+
+.btn-accent:hover::before {
+    width: 100%;
+}
+
+.btn-accent:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+@media (max-width: 768px) {
+    .resume-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+  /*
+        |==========================================================================
+        | CUSTOM STYLES FOR NON-IT COMPANIES TABLE
+        | NOTE: This block assumes your main styles.css defines the :root variables
+        | and general utility classes like .container, .section, .section-title.
+        |==========================================================================
+        */
+        .companies-section {
+            padding: 60px 0;
+            background-color: var(--gray-lighter);
+        }
+
+        .companies-section .section-title {
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        
+        /* Introductory Content Styling */
+        .intro-card {
+            background: var(--darker);
+            border: 1px solid var(--gray-light);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .intro-card h3 {
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            padding-bottom: 20px ;
+            color: white;
+        }
+
+        .intro-card ul {
+            list-style: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            font-size: 0.95rem;
+            color: var(--dark);
+            color: white;
+        }
+        
+        /* Table Styles (As provided in previous answer) */
+        .company-table-wrap {
+            overflow-x: auto;
+            background: var(--lighter);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            margin: 30px auto;
+            padding: 20px;
+        }
+
+        .company-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 1000px;
+        }
+
+        .company-table th,
+        .company-table td {
+            padding: 15px 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--gray-light);
+            transition: var(--transition);
+        }
+
+        .company-table thead th {
+            background: var(--darker);
+            color: var(--lighter);
+            font-weight: 700;
+            font-size: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .company-table thead tr:first-child th:first-child { border-top-left-radius: var(--radius-lg); }
+        .company-table thead tr:first-child th:last-child { border-top-right-radius: var(--radius-lg); }
+
+        .company-table tbody tr:nth-child(even) {
+            background-color: var(--gray-lighter);
+        }
+
+        .company-table tbody tr:hover {
+            background-color: var(--primary-light);
+            color: var(--darker);
+        }
+
+        .company-table a {
+            color: var(--primary-dark);
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .company-table a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+
+        .company-table td:first-child {
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .sector-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--darker);
+            background-color: var(--accent);
+        }
+
+        .company-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+
+
+/*
+|==========================================================================
+| RESPONSIVE DESIGN FOR NON-IT COMPANIES LIST
+|==========================================================================
+*/
+
+/* --- Tablet / Smaller Desktop Adjustments (max-width: 992px) --- */
+@media (max-width: 992px) {
+    .companies-section {
+        padding: 50px 0;
+    }
+
+    .companies-section .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Adjust padding for the content cards */
+    .intro-card {
+        padding: 25px;
+    }
+
+    /* Adjust font size inside content cards */
+    .intro-card h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* --- Mobile Adjustments (max-width: 768px) --- */
+@media (max-width: 768px) {
+    .companies-section {
+        padding: 40px 0;
+    }
+    
+    .companies-section .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* Stack IT vs Non-IT benefits vertically */
+    .intro-card > div {
+        display: block; /* Overrides the grid/flex setup for vertical stacking */
+    }
+
+    /* Add spacing between the stacked benefit/demerit sections */
+    .intro-card > div > div:first-child {
+        margin-bottom: 20px;
+    }
+
+    /* Reduce table wrapper padding */
+    .company-table-wrap {
+        padding: 10px;
+    }
+
+    /* The table itself retains min-width: 1000px to ensure horizontal scrolling */
+    .company-table th,
+    .company-table td {
+        padding: 12px 10px; /* Reduced padding for compact mobile view */
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    .sector-tag {
+        padding: 3px 6px;
+        font-size: 0.75rem;
+    }
+
+    /* Reduce horizontal padding on the table header/body (assuming .container handled outer padding) */
+    .company-table thead th:first-child,
+    .company-table tbody td:first-child {
+        padding-left: 10px;
+    }
+}
+
+/* --- Small Mobile Adjustments (max-width: 576px) --- */
+@media (max-width: 576px) {
+    /* Further reducing padding for very small devices (based on your core CSS pattern) */
+    .intro-card {
+        padding: 20px 15px;
+    }
+
+    .intro-card h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Ensure table content remains legible but very compact */
+    .company-table th,
+    .company-table td {
+        padding: 8px; 
+    }
+}        
+
+/*
+|==========================================================================
+| Salary details 
+|==========================================================================
+*/
+
+ /* This style block assumes your main styles.css defines all core classes and variables */
+        
+        /* Specific header for the salary page */
+        .salary-section {
+            padding: 0px;
+            background-color: var(--lighter); /* Use a light background color for the main section */
+        }
+        
+        .salary-section .section-title {
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            padding-top: 10px;
+        }
+
+        /* Styling for the explanatory cards */
+        .salary-intro-card {
+            background: var(--lighter);
+            border: 1px solid var(--darker);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            margin-bottom: 10px;
+        }
+
+        .salary-intro-card h3 {
+            color: var(--primary-dark);
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+        
+        /* Table styles reuse the .company-table-wrap and .company-table styles from styles.css */
+        
+        /* Responsive adjustments for the table content */
+        @media (max-width: 992px) {
+            .salary-section .section-title {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .salary-section .section-title {
+                font-size: 1.8rem;
+            }
+            .company-table th,
+            .company-table td {
+                padding: 10px 8px; /* Reduce padding on mobile */
+                font-size: 0.8rem; /* Smaller font for more compact display */
+            }
+            .company-table th:nth-child(3),
+            .company-table td:nth-child(3) {
+                 min-width: 100px; /* Ensure Fresher column is narrow but visible */
+            }
+            .company-table th:nth-child(1),
+            .company-table td:nth-child(1) {
+                width: 30px;
+            }
+        }
+/*
+|==========================================================================
+| EXPLORE / WHY CHOOSE US SECTIONS (FEATURE CARDS)
+|==========================================================================
+*/
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 40px 30px;
+    background: white;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid transparent;
+    text-decoration: none; /* Ensure link style is clean */
+    color: var(--darker);
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gradient);
+    transition: var(--transition);
+}
+
+.feature-card:hover::before {
+    height: 100%;
+    opacity: 0.05;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-light);
+}
+
+.feature-icon {
+    margin-bottom: 25px;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--darker);
+    position: relative;
+    z-index: 1;
+}
+
+.feature-desc {
+    color: var(--gray);
+    position: relative;
+    z-index: 1;
+}
+
+
+/*
+|==========================================================================
+| CTA SECTION STYLES
+|==========================================================================
+*/
+
+.cta-section {
+    text-align: center;
+    background: var(--darker);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background pattern */
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.cta-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-subtitle {
+    margin-bottom: 40px;
+    opacity: 0.8;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-input {
+    flex: 1;
+    padding: 18px 25px;
+    border: none;
+    border-radius: var(--radius) 0 0 var(--radius);
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.cta-btn {
+    padding: 18px 30px;
+    background: var(--gradient);
+    color: white;
+    border: none;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-btn:hover {
+    background: linear-gradient(135deg, var(--primary-dark), var(--secondary));
+}
+
+
+/*
+|==========================================================================
+| FOOTER STYLES
+|==========================================================================
+*/
+
+footer {
+    background: var(--darker);
+    color: white;
+    padding: 0 0 30px;
+    position: relative;
+}
+
+/* Background pattern */
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%233b82f6' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin-bottom: 70px;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-brand {
+    max-width: 400px;
+}
+
+.footer-logo {
+    font-size: 32px; /* This is in the HTML as a text node next to the brand section */
+    font-weight: 800;
+    margin-bottom: 25px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-desc {
+    margin-bottom: 25px;
+    opacity: 0.8;
+    line-height: 1.7;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    font-size: 18px;
+    color: white; /* Ensure icons are white */
+}
+
+.social-link:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 3px;
+    background: var(--gradient);
+    border-radius: 2px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-link {
+    opacity: 0.8;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.footer-link i {
+    font-size: 14px;
+    color: var(--primary);
+}
+
+.footer-link:hover {
+    opacity: 1;
+    color: var(--primary-light);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0.7;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+}
+
+
+/*
+|==========================================================================
+| RESPONSIVE DESIGN (MEDIA QUERIES) - FIXED MOBILE ISSUES
+|==========================================================================
+*/
+
+
+@media (max-width: 1200px) {
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    /* FIX: Show the hamburger icon on tablets/mobiles */
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        /* Overridden from display: flex; on desktop */
+        position: fixed;
+        top: 80px; /* Needs to match header height */
+        left: -100%; /* Hides the menu by default */
+        background: white;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        transition: 0.3s;
+        z-index: 999; /* Below the hamburger z-index 1001 */
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link {
+        padding: 15px 0;
+        width: 100%;
+        display: block;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 150px 0 80px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Resume Cards Grid - Mobile/Tablet Styles */
+    .resume-cards-grid {
+        /* Reverts to full width for mobile screen, keeping it centered */
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .cta-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cta-input,
+    .cta-btn {
+        border-radius: var(--radius);
+        width: 100%;
+    }
+
+    .cta-input {
+        border-radius: var(--radius);
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .job-card,
+    .feature-card {
+        padding: 25px;
+    }
+
+    .job-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .job-footer {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    /* FIX: Tighter container padding for tiny screens (e.g., iPhone SE) */
+    .container {
+        padding: 0 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- Mobile-Specific Styles (for screens up to 768px) --- */
+@media (max-width: 768px) {
+    /* 1. Hide the regular menu list */
+    .nav-menu {
+        /* This is the key change: move it off-screen by default */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Start off-screen */
+        width: 70%;
+        height: 100vh;
+        background-color: #fff; /* or your preferred background */
+        flex-direction: column;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    /* 2. Style the menu when it's open (usually toggled by JavaScript) */
+    .nav-menu.active {
+        right: 0; /* Slide in */
+    }
+
+    /* 3. Add a Toggle/Hamburger Icon to the header */
+    /* You'll need to add a button/div for this in the HTML */
+    .menu-toggle {
+        display: block; /* Make the icon visible */
+        cursor: pointer;
+        font-size: 1.5rem;
+        z-index: 101; /* Keep it above the sliding menu */
+    }
+
+    /* 4. Center the logo and make the nav-container flexible */
+    .nav-container {
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Ensure list items stack vertically and are full width */
+    .nav-menu li {
+        width: 100%;
+        text-align: left;
+        padding: 15px 20px;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+/* --- Default Styles (For Desktop) --- */
+/* Ensure the toggle button is hidden on larger screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Fix hero padding when desktop-site is enabled on mobile */
+@media screen and (max-width: 1100px) {
+    .hero {
+        padding-top: 120px !important;
+        padding-bottom: 60px !important;
+        min-height: auto !important;
+    }
+}
+/* Prevent hero background image from zooming/cropping */
+@media screen and (max-width: 1100px) {
+    .hero {
+        background-size: contain !important;
+        background-position: top center !important;
+    }
+}
+/* Fix hero title & subtitle for all mobile and desktop-site modes */
+@media screen and (max-width: 1100px) {
+    .hero-title {
+        font-size: 2.2rem !important;
+        -webkit-text-stroke: 0.3px black;
+    }
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+    }
+}

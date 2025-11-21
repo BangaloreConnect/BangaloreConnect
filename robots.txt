@@ -1,0 +1,17 @@
+# robots.txt for bangalorconnect.online
+# Allow all search engines to crawl all important pages
+
+User-agent: *
+Allow: /
+
+# Prevent crawling of unnecessary files (images, scripts, etc. that don't affect SEO)
+Disallow: /backgroundimage.png
+Disallow: /favicon.ico
+Disallow: /favicon.png
+Disallow: /logo.ico
+Disallow: /logo.png
+Disallow: /script.js
+Disallow: /styles.css
+
+# Sitemap location
+Sitemap: https://bangalorconnect.online/sitemap.xml

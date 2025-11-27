@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Top Startups Hiring in Bangalore | Bangalore Connect</title>
+    <meta name="description" content="A curated list of the top 50 growing startups actively hiring in Bangalore. Find your next opportunity in product, engineering, data, and design roles." />
+    <meta name="keywords" content="Bangalore startups hiring, top 50 startups India, startup jobs Bangalore, product jobs, engineering careers" />
+    <link rel="icon" type="image/png" href="logo.png" sizes="64x64" />
+    <meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+   <style>
+/* --------------------------------------------------------
+| GLOBAL VARIABLES (FOR TEXT COLOR BLACK) - COPIED FROM ARTICLE 1
+| -------------------------------------------------------- */
+:root {
+    --primary: #000000; 
+    --primary-dark: #000000;
+    --darker: #1e293b; /* Retain dark background for footer */
+    --lighter: #ffffff;
+    --gray: #000000;
+    --muted: #000000;
+    --page-bg: #ffffff;
+    --content-max-width: 900px;
+    --radius-lg: 12px;
+    --primary-light: #000000;
+    --secondary: #000000;
+    --accent: #000000;
+    --dark: #000000;
+    --gray-light: #000000;
+    --gray-lighter: #f8fafc;
+    --success: #000000;
+    --gradient: none;
+}
+
+body {  
+    margin: 0;  
+    font-family: 'Inter','Plus Jakarta Sans',Arial,sans-serif;  
+    background: var(--page-bg);  
+    color: #000000 !important;
+    line-height: 1.75;  
+}
+
+/* Header */
+.logo { color:#000 !important; }
+.logo-title-wrap h1 { color:#000 !important; }
+.tagline { color:#000 !important; }
+
+/* Section */
+.section { padding:100px 0; }
+.section-header { text-align:center; margin-bottom:60px; }
+
+/* Article Titles */
+.article-main-title { 
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:2.5rem;  
+    margin:6px 0 10px;  
+    line-height:1.15;  
+    color:#000 !important;
+}
+
+.article-meta { 
+    /* Keeping the color black as requested, even though usually muted */
+    color:#000 !important; 
+    margin-bottom:20px;  
+    font-size:0.95rem;  
+}
+
+.table-link {
+    color: #000 !important;
+    font-weight: 500;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 { color:#000 !important; }
+
+/* Paragraphs */
+p, .footer-desc {
+    text-align:justify !important;
+    margin-bottom:1.5em !important;
+    color:#000 !important;
+}
+
+/* Lists */
+ul,ol {
+    margin-left:25px;
+    margin-bottom:1.5em !important;
+    color:#000 !important;
+}
+li { color:#000 !important; }
+
+/* Blockquote */
+blockquote {
+    border-left:4px solid #000;
+    background:#f8fafc;
+    padding:12px 16px;
+    margin:14px 0;
+    border-radius:6px;
+    color:#000 !important;
+}
+
+/* Table Specific Styling for this article */
+.startup-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.startup-table th, .startup-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #000; /* Ensure text is black */
+}
+
+.startup-table th {
+    background-color: #f8fafc; /* Light background for header */
+    font-weight: 600;
+    color: var(--darker); /* Darker text for headers */
+}
+
+.startup-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+.link-icon {
+    margin-right: 5px;
+    color: #000; /* Link icon color */
+}
+
+/* Footer: Background remains dark, text white/light gray for visibility */
+footer {
+    background:#1e293b;
+    color:white !important;
+    padding:30px 0;
+}
+
+.footer-brand .logo { color:#000000 !important; }
+.footer-brand .logo h1 { color:#000000 !important; }
+.footer-desc { color:#eee !important; }
+.footer-links-column h3 { color:white !important; }
+.footer-link { color:#eee !important; }
+/* Override specific element styles to ensure visibility on dark background */
+.footer-link i { color: #ccc !important; } /* Light icons */
+
+.footer-bottom {
+    border-top:1px solid rgba(255,255,255,0.1);
+    color:#ddd !important;
+}
+
+/* --------------------------------------------------------
+| MOBILE RESPONSIVENESS STYLES (Key for Mobile-Friendliness) - COPIED FROM ARTICLE 1
+| -------------------------------------------------------- */
+
+/* Container width for better padding on small screens */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Base padding */
+}
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+    /* Main body padding adjustment if header isn't handled externally */
+    .section {
+        padding: 80px 0; /* Reduce section padding */
+    }
+
+    /* Article headings: reduce size for smaller screens */
+    .article-main-title {  
+        font-size: 2rem;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    /* Footer grid stacks on tablet/mobile */
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns vertically */
+        gap: 30px;
+    }
+    
+    /* Center text/elements that look better centered when stacked */
+    .footer-brand {
+        text-align: center;
+        max-width: none;
+    }
+    
+    .footer-brand .logo {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Fix logo tagline alignment when stacked */
+    .tagline {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    /* Table horizontal scroll for smaller screens */
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0; /* Further reduction for mobile */
+    }
+    
+    /* Main article title size adjustment */
+    .article-main-title {
+        font-size: 1.8rem;
+    }
+
+    h2 { 
+        font-size: 1.4rem !important; /* Adjust H2 size */
+    }
+    
+    h3 { 
+        font-size: 1.1rem !important; /* Adjust H3 size */
+    }
+
+    /* Paragraph font size fine tuning */
+    p, li, .footer-desc {
+        font-size: 0.95rem;
+    }
+
+    /* List indentation compacting */
+    ul, ol {
+        margin-left: 15px;
+    }
+    
+    /* Footer links column alignment for smaller screens */
+    .footer-links-column {
+        text-align: center;
+    }
+    .footer-links-column h3 {
+        text-align: center;
+    }
+    .footer-links li {
+        justify-content: center; /* Center footer links */
+        display: flex;
+    }
+    .footer-link {
+        justify-content: center;
+    }
+
+    /* Compact table for mobile */
+    .startup-table th, .startup-table td {
+        padding: 8px 10px;
+    }
+    .startup-table th:nth-child(2), .startup-table td:nth-child(2) { display: none; } /* Hide Industry column on very small screens if needed */
+}
+
+/* Smallest Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Minimum padding for very small devices */
+    }
+    
+    .article-main-title {
+        font-size: 1.6rem;
+    }
+    
+    .logo-title-wrap h1 {
+        font-size: 1.1rem;
+    }
+}
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3551205878174657"
+     crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="loader">Loading...</div>
+
+    <header>
+        <div class="container nav-container">
+            <a href="./index.html" class="logo">
+                <div class="logo-title-wrap">
+                    <img src="logo.png" alt="Bangalore Connect Logo" class="logo-img">
+                    <h1>Bangalore Connect</h1>
+                </div>
+                <p class="tagline">Connecting Talent with Opportunities</p>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-link">Home</a></li>
+                    <li><a href="./index.html#jobs" class="nav-link">Jobs</a></li>
+                    <li><a href="./Aboutus.html" class="nav-link">About</a></li>
+                    <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="./career.html" class="nav-link">Careers</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">    
+                <h1 class="article-main-title">Best Startups in Bangalore</h1>
+                <script async="async" data-cfasync="false" src="//pl28143613.effectivegatecpm.com/bc424e5ac4c7b28834b5720cb2f02483/invoke.js"></script>
+<div id="container-bc424e5ac4c7b28834b5720cb2f02483"></div>
+            </div>
+            
+            <article>
+              
+                <h2>The Bangalore’s Startup Ecosystem</h2>
+                <p>
+                    Bangalore is often called the Silicon Valley of India—and for good reason. It’s not just the IT hub of Karnataka; it’s the place where technology, talent, and creativity come together. Even when the larger IT industry goes through rough patches, with slower hiring or occasional layoffs, the city’s startup scene keeps buzzing with energy. These smaller and faster-moving companies bring a different kind of excitement to the city’s tech ecosystem.
+                </p>
+                <p>
+                    Startups might not have the long-term stability of well-established multinational corporations, but they make up for it with something far more rewarding: the thrill of building something from scratch. Working at a startup means wearing many hats, learning on the go, and seeing the real impact of your efforts almost immediately. It’s a space where ideas evolve quickly, innovation happens daily, and every contribution—no matter how small—can shape the future of the company. That’s what makes Bangalore feel so alive: it’s not just about technology, it’s about possibility.
+                </p>
+                <p>
+                    Working for a startup means joining a company that is always growing and changing. Things can get intense and you will need to put in a lot of energy, but you learn much faster here than anywhere else. For IT professionals, especially if you know about new areas like Fintech, Healthtech, SaaS, or AI, startups are the places where new ideas and trends are actually happening.
+                </p>
+
+                <p>
+                   Startups in Bangalore move fast and rely on the passion of their teams. They are places where you can make a real impact at work, which is why they are good for people with experience who want a change, and also for those just starting their careers.
+                </p>
+
+                <h2>Why Startups Keep Hiring</h2>
+                <p>
+                   Even with changes in the world economy, many startups in Bangalore are still hiring because they have solid funding and big goals for the future. Unlike big companies that might be cutting their teams or saving money, startups hire carefully for important roles that help them earn money or improve their products.
+                </p>
+
+                <p>
+                    They focus on people with special skills—like a senior engineer who works with Go and large systems, or a data expert who knows how to put models into action. Right now, jobs in product management, engineering, sales, and design are always needed. If you want to apply at a startup, check out companies that have grown recently, raised money, or post jobs often on major job sites. This is a good place to start your search for a job in Bangalore’s fast-moving tech scene.
+                </p>
+
+                <div class="table-responsive">
+                    <table class="startup-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Company Name</th>
+                                <th>Industry Focus</th>
+                                <th>Check LinkedIn Jobs</th>
+                                <th>Check Naukri Jobs</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+<tr><td>1</td><td>Razorpay</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/razorpay/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/razorpay-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>2</td><td>Swiggy</td><td>Food/E-commerce</td>
+<td><a href="https://www.linkedin.com/company/swiggy/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/swiggy-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>3</td><td>Byju's</td><td>Edtech</td>
+<td><a href="https://www.linkedin.com/company/byjus/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/byjus-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>4</td><td>PhonePe</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/phonepe/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/phonepe-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>5</td><td>Zomato</td><td>Food/E-commerce</td>
+<td><a href="https://www.linkedin.com/company/zomato/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/zomato-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>6</td><td>Meesho</td><td>E-commerce</td>
+<td><a href="https://www.linkedin.com/company/meesho/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/meesho-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>7</td><td>Dream11</td><td>Gaming/Fantasy Sports</td>
+<td><a href="https://www.linkedin.com/company/dream11/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/dream11-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>8</td><td>Cred</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/cred-club/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/cred-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>9</td><td>Groww</td><td>Fintech/Wealth</td>
+<td><a href="https://www.linkedin.com/company/groww/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/groww-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>10</td><td>Unacademy</td><td>Edtech</td>
+<td><a href="https://www.linkedin.com/company/unacademy/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/unacademy-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>11</td><td>Licious</td><td>E-commerce/D2C</td>
+<td><a href="https://www.linkedin.com/company/licious/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/licious-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>12</td><td>Zerodha</td><td>Fintech/Brokerage</td>
+<td><a href="https://www.linkedin.com/company/zerodha/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/zerodha-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>13</td><td>Vernacular.ai</td><td>AI/SaaS</td>
+<td><a href="https://www.linkedin.com/company/vernacular-ai/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/vernacular-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>14</td><td>Dunzo</td><td>Quick Commerce</td>
+<td><a href="https://www.linkedin.com/company/dunzo/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/dunzo-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>15</td><td>Chargebee</td><td>SaaS/Fintech</td>
+<td><a href="https://www.linkedin.com/company/chargebee/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/chargebee-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>16</td><td>Khatabook</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/khatabook/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/khatabook-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>17</td><td>Urban Company</td><td>Home Services</td>
+<td><a href="https://www.linkedin.com/company/urbancompany/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/urban-company-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>18</td><td>Cure.fit / cult.fit</td><td>Health/Fitness</td>
+<td><a href="https://www.linkedin.com/company/cultfitofficial/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/curefit-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>19</td><td>Acko</td><td>Insurtech</td>
+<td><a href="https://www.linkedin.com/company/acko/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/acko-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>20</td><td>BigBasket</td><td>E-grocery</td>
+<td><a href="https://www.linkedin.com/company/bigbasket-com/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/bigbasket-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>21</td><td>Slice</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/slice-it/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/slice-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>22</td><td>Dailyhunt</td><td>Content/Media</td>
+<td><a href="https://www.linkedin.com/company/dailyhunt/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/dailyhunt-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>23</td><td>NoBroker</td><td>Real Estate Tech</td>
+<td><a href="https://www.linkedin.com/company/nobroker/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/nobroker-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>24</td><td>Myntra</td><td>Fashion E-commerce</td>
+<td><a href="https://www.linkedin.com/company/myntra/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/myntra-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>25</td><td>Postman</td><td>SaaS/DevTools</td>
+<td><a href="https://www.linkedin.com/company/getpostman/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/postman-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>26</td><td>Whatfix</td><td>SaaS</td>
+<td><a href="https://www.linkedin.com/company/whatfix/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/whatfix-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>27</td><td>BrowserStack</td><td>SaaS/DevTools</td>
+<td><a href="https://www.linkedin.com/company/browserstack/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/browserstack-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>28</td><td>MoEngage</td><td>SaaS/Marketing</td>
+<td><a href="https://www.linkedin.com/company/moengage/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/moengage-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>29</td><td>Gupshup</td><td>Conversational AI</td>
+<td><a href="https://www.linkedin.com/company/gupshup/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/gupshup-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>30</td><td>BlackBuck</td><td>Logistics Tech</td>
+<td><a href="https://www.linkedin.com/company/blackbuck/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/blackbuck-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>31</td><td>Vedantu</td><td>Edtech</td>
+<td><a href="https://www.linkedin.com/company/vedantu/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/vedantu-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>32</td><td>Delhivery</td><td>Logistics Tech</td>
+<td><a href="https://www.linkedin.com/company/delhivery/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/delhivery-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>33</td><td>Mamaearth</td><td>D2C/E-commerce</td>
+<td><a href="https://www.linkedin.com/company/mamaearthjobs/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/mamaearth-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>34</td><td>ShareChat</td><td>Social Media</td>
+<td><a href="https://www.linkedin.com/company/sharechat/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/sharechat-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>35</td><td>Kissht</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/kissht/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/kissht-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>36</td><td>Rapido</td><td>Mobility/Logistics</td>
+<td><a href="https://www.linkedin.com/company/rapido-bike-taxi/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/rapido-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>37</td><td>Pine Labs</td><td>Fintech/POS</td>
+<td><a href="https://www.linkedin.com/company/pine-labs/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/pine-labs-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>38</td><td>Pristyn Care</td><td>Healthtech</td>
+<td><a href="https://www.linkedin.com/company/pristyncare/jobs/" class="table--link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/pristyn-care-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>39</td><td>CoinDCX</td><td>Crypto/Fintech</td>
+<td><a href="https://www.linkedin.com/coindcx-jobs" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td><td><a href="https://www.naukri.com/coindcx-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+</tr>
+
+
+<tr><td>40</td><td>Skylark Drones</td><td>Drones/GIS</td>
+<td><a href="https://www.linkedin.com/company/skylark-drones/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/skylark-drones-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>41</td><td>Niyo</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/niyofinancial/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/niyo-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>42</td><td>Zetwerk</td><td>Manufacturing Tech</td>
+<td><a href="https://www.linkedin.com/company/zetwerk/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/zetwerk-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>43</td><td>Open</td><td>Fintech/SME Banking</td>
+<td><a href="https://www.linkedin.com/company/bankopen/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/open-financial-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>44</td><td>Classplus</td><td>Edtech</td>
+<td><a href="https://www.linkedin.com/company/classplus/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/classplus-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>45</td><td>OfBusiness</td><td>B2B E-commerce/Fintech</td>
+<td><a href="https://www.linkedin.com/company/ofbusiness/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/ofbusiness-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>46</td><td>Lendingkart</td><td>Fintech</td>
+<td><a href="https://www.linkedin.com/company/lendingkart/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/lendingkart-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>47</td><td>Moglix</td><td>B2B E-commerce</td>
+<td><a href="https://www.linkedin.com/company/moglix/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/moglix-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>48</td><td>Indegene</td><td>Healthtech</td>
+<td><a href="https://www.linkedin.com/company/indegene/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/indegene-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>49</td><td>Fisdom</td><td>Fintech/Wealth</td>
+<td><a href="https://www.linkedin.com/company/fisdom/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/fisdom-jobs" class="table--link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+<tr><td>50</td><td>Bizongo</td><td>B2B E-commerce</td>
+<td><a href="https://www.linkedin.com/company/bizongo/jobs/" class="table-link"><i class="fab fa-linkedin-in link-icon"></i> Apply Here</a></td>
+<td><a href="https://www.naukri.com/bizongo-jobs" class="table-link"><i class="fas fa-briefcase link-icon"></i> Apply Here</a></td></tr>
+
+</tbody>
+
+                    </table>
+                </div>
+
+              <h2>How to Apply to a Startup Effectively</h2>
+              <p>
+                  Applying to a startup is different from sending your resume to a big company. For startups, your resume needs to show what you have actually built and what results you brought, not just a list of daily duties. Since startup hiring teams are usually small, they pay attention to people who keep things clear and simple.
+              </p>
+              <ul>
+                  <li><strong>1.Tailor your application:-</strong> Change your cover letter for each company you apply to. Talk about what the company makes and why you like it. It helps if you mention what you find interesting or useful about their product.</li>
+                  <li><strong>2. Share your work:-</strong> If you are an engineer or designer, add a link to your GitHub or an online project. Give examples of your work that solve real problems. This proves your skills in action.</li>
+                  <li><strong>3. Connect with employees:-</strong> Many times, getting hired can be quicker if you speak directly to someone who works there. Use LinkedIn to reach out and ask for a short chat. Learning more from current employees helps much more than just sending out forms.</li>
+              </ul>
+
+              <h2>Tips for Picking the Right Startup</h2>
+              <p>
+                  If a startup offers you a job, remember to look at more than just the salary. Make sure to check how much funding the company has left—this is called their "runway" and tells you if they can keep running for a long time. Find out if the founders or leaders have experience at other successful companies.
+              </p>
+              <p>
+                  Most important of all, look at how people work together. Ask questions about work-life balance and how new hires can learn new things. Startups can help you grow in your career much faster than big companies, but only if the workplace is healthy and gives you chances to learn and rest.
+              </p>
+              <p>
+                  Choosing the right startup can give you the chance to move up quickly and gain skills you might not learn elsewhere. Start your search with these tips, and get ready for a great career experience in Bangalore’s lively startup world.
+              </p>
+
+
+            </article>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="./index.html" class="footer-logo" style="display:flex; align-items:center; gap:10px; color: white;">
+                        <img src="logo.png" alt="Bangalore Connect Logo" style="width:36px; height:36px; object-fit:contain;" />
+                        Bangalore Connect
+                    </a>
+                    <p class="footer-desc" style="text-align: justify;">
+                        Bangalore Connect is your go-to job portal for finding the best jobs in Bangalore. We connect Smart People with top companies, making your career growth easy and efficient. Find verified jobs and move your career forward today.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://whatsapp.com/channel/0029VbC3pS63gvWSBbw93I19" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="tel:9019540558" class="social-link"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/company/bangalore-connect/ " class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/bang.aloreconnect/" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-column">
+                    <h3 class="footer-heading">For Job Seekers</h3>
+                    <ul class="footer-links">
+                        <li><a href="./privacy-policy.html" class="footer-link"><i class="fas fa-chevron-right"></i> Privacy Policy</a></li>
+                        <li><a href="./faqs.html" class="footer-link"><i class="fas fa-chevron-right"></i> FAQs</a></li>
+                        <li><a href="./tandc.html" class="footer-link"><i class="fas fa-chevron-right"></i> Terms and Conditions</a></li>
+                        <li><a href="./report.html" class="footer-link"><i class="fas fa-chevron-right"></i> Report Problem</a></li>
+                    </ul>
+                </div>
+            </div>
+
+                   </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script> window.addEventListener('load', () => document.body.classList.add('loaded')); </script>
+</body>
+</html>

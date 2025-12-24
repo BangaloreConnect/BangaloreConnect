@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jobs Portal</title>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap');
+    * { font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif; }
+    .ios-card { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .ios-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0, 122, 255, 0.2); border-color: rgba(0, 122, 255, 0.3); }
+    .ios-button { transition: all 0.2s ease; }
+    .ios-button:hover { transform: scale(1.02); opacity: 0.9; }
+    .ios-button:active { transform: scale(0.98); }
+    .share-button { transition: all 0.2s ease; }
+    .share-button:hover { background-color: rgba(0, 122, 255, 0.1); transform: rotate(15deg) scale(1.1); }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .hero-gradient { background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%); }
+    .job-badge { background: rgba(0, 122, 255, 0.1); color: #007AFF; font-weight: 500; }
+    .toast { position: fixed; top: 80px; right: 20px; background: white; padding: 16px 24px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); z-index: 1000; animation: slideIn 0.3s ease; }
+    @keyframes slideIn { from { transform: translateX(400px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+    .animated-bg { position: relative; overflow: hidden; }
+    .animated-bg::before { content: ''; position: absolute; width: 200%; height: 200%; top: -50%; left: -50%; background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 25%, transparent 50%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.1) 100%); animation: wave 15s linear infinite; }
+    @keyframes wave { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    .floating-circles { position: absolute; width: 100%; height: 100%; top: 0; left: 0; overflow: hidden; pointer-events: none; }
+    .circle { position: absolute; border-radius: 50%; background: rgba(255, 255, 255, 0.1); animation: float 20s infinite ease-in-out; }
+    .circle:nth-child(1) { width: 80px; height: 80px; left: 10%; animation-duration: 15s; }
+    .circle:nth-child(2) { width: 120px; height: 120px; right: 15%; animation-duration: 20s; }
+    .circle:nth-child(3) { width: 60px; height: 60px; left: 50%; animation-duration: 18s; }
+    @keyframes float { 0%, 100% { transform: translateY(0) scale(1); opacity: 0.3; } 50% { transform: translateY(-100px) scale(1.2); opacity: 0.6; } }
+    .job-logo { width: 56px; height: 56px; border-radius: 14px; background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%); display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 700; color: white; flex-shrink: 0; }
+    .modal-backdrop { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+  </style>
+</head>
+<body class="h-full overflow-auto">
+  <div class="w-full h-full bg-gray-50">
+    <header class="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <h1 id="siteTitle" class="text-2xl font-semibold text-gray-900">JobsHub</h1>
+        <nav class="flex items-center gap-8">
+          <a href="#home" class="text-gray-600 hover:text-gray-900 transition">Home</a>
+          <a href="#jobs" class="text-gray-600 hover:text-gray-900 transition">Jobs</a>
+          <a href="#about" class="text-gray-600 hover:text-gray-900 transition">About</a>
+          <a href="#contact" class="text-gray-600 hover:text-gray-900 transition">Contact</a>
+          <button id="adminLoginBtn" class="ios-button bg-blue-500 text-white px-6 py-2 rounded-full font-medium"> Admin Login </button>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="w-full hero-gradient animated-bg text-white py-20">
+      <div class="floating-circles"><div class="circle"></div><div class="circle"></div><div class="circle"></div></div>
+      <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <h2 id="heroTagline" class="text-5xl font-bold mb-3">Find Your Dream Job Today</h2>
+        <p class="text-xl text-blue-100 mb-8">Connecting talented professionals with amazing opportunities</p>
+        <a href="#jobs" class="ios-button inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold text-lg"> Browse Jobs </a>
+      </div>
+    </section>
+
+    <section class="w-full py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Featured Opportunities</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="ios-card bg-white rounded-3xl p-6 shadow-lg border border-gray-100 hover:shadow-xl">
+            <div class="flex items-start gap-4 mb-4">
+              <div class="job-logo"><span>S</span></div>
+              <div class="flex-1">
+                <h4 class="text-lg font-semibold text-gray-900">Senior iOS Developer</h4>
+                <p class="text-blue-600 font-medium text-sm">Apple Inc.</p>
+                <p class="text-gray-500 text-sm flex items-center mt-1"><i class="fas fa-map-marker-alt mr-1"></i>Cupertino, CA</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between"><span class="job-badge px-3 py-1 rounded-full text-xs">Full-time</span> <button class="ios-button bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm"> Apply Now </button></div>
+          </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="jobs" class="w-full py-16">
+      <div class="w-full px-6">
+        <h3 class="text-4xl font-bold text-gray-900 mb-12 text-center">Latest Opportunities</h3>
+        <div id="jobsContainer" class="flex flex-col gap-6 max-w-7xl mx-auto"></div>
+        <div id="noJobsMessage" class="text-center py-16 text-gray-500 hidden">
+          <i class="fas fa-briefcase text-6xl mb-4 text-gray-300"></i>
+          <p class="text-xl">No jobs posted yet. Check back soon!</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full bg-gray-900 text-white py-8">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <p id="footerText" class="text-gray-400">Built with ❤️ in Bangalore</p>
+        <p class="text-gray-500 text-sm mt-2">© 2024 JobsHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="hidden fixed inset-0 modal-backdrop bg-black bg-opacity-50 z-50 flex items-center justify-center">
+      <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Admin Login</h3>
+        <form id="loginForm">
+          <div class="mb-4"><label class="block text-gray-700 font-medium mb-2">Username</label> <input type="text" id="username" class="w-full px-4 py-3 border border-gray-300 rounded-xl" required></div>
+          <div class="mb-6"><label class="block text-gray-700 font-medium mb-2">Password</label> <input type="password" id="password" class="w-full px-4 py-3 border border-gray-300 rounded-xl" required></div>
+          <div class="flex gap-3"><button type="submit" class="ios-button flex-1 bg-blue-500 text-white py-3 rounded-xl font-semibold"> Login </button> <button type="button" onclick="document.getElementById('loginModal').classList.add('hidden')" class="ios-button flex-1 bg-gray-200 text-gray-700 py-3 rounded-xl font-semibold"> Cancel </button></div>
+        </form>
+      </div>
+    </div>
+
+    <div id="postJobModal" class="hidden fixed inset-0 modal-backdrop bg-black bg-opacity-50 z-50 flex items-center justify-center overflow-auto">
+      <div class="bg-white rounded-3xl p-8 max-w-2xl w-full mx-4 my-8 shadow-2xl">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold text-gray-900">Post New Job</h3><button id="logoutBtn" class="ios-button bg-red-500 text-white px-4 py-2 rounded-full text-sm font-medium"> Logout </button>
+        </div>
+        <form id="jobForm">
+          <div class="mb-4"><label class="block text-gray-700 font-medium mb-2">Job Title</label> <input type="text" id="jobTitle" class="w-full px-4 py-3 border rounded-xl" required></div>
+          <div class="mb-4"><label class="block text-gray-700 font-medium mb-2">Company</label> <input type="text" id="company" class="w-full px-4 py-3 border rounded-xl" required></div>
+          <div class="grid grid-cols-2 gap-4 mb-4">
+            <div><label class="block text-gray-700 font-medium mb-2">Location</label> <input type="text" id="location" class="w-full px-4 py-3 border rounded-xl" required></div>
+            <div><label class="block text-gray-700 font-medium mb-2">Job Type</label> <select id="jobType" class="w-full px-4 py-3 border rounded-xl"><option>Full-time</option><option>Remote</option></select></div>
+          </div>
+          <div class="mb-4"><label class="block text-gray-700 font-medium mb-2">Salary Range</label> <input type="text" id="salary" class="w-full px-4 py-3 border rounded-xl" required></div>
+          <div class="mb-6"><label class="block text-gray-700 font-medium mb-2">Description</label> <textarea id="description" rows="4" class="w-full px-4 py-3 border rounded-xl" required></textarea></div>
+          <button type="submit" id="submitJobBtn" class="ios-button w-full bg-blue-500 text-white py-3 rounded-xl font-semibold"> Post Job </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // SUPABASE CONFIG (KEEP YOUR KEYS HERE)
+    const SUPABASE_URL = 'https://frrhycqdhwrtdxbgxnzw.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZycmh5Y3FkaHdydGR4Ymd4bnp3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjY1NTQyODIsImV4cCI6MjA4MjEzMDI4Mn0.aZZFw8gwwuK39hzIqXVV0x5acFBmm_BBfaq3ygOhFok';
+    const supabase = supabasejs.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    let isLoggedIn = false;
+
+    async function loadJobs() {
+      const { data: jobs, error } = await supabase.from('jobs').select('*').order('posted_date', { ascending: false });
+      const container = document.getElementById('jobsContainer');
+      const noJobsMsg = document.getElementById('noJobsMessage');
+
+      if (error || !jobs || jobs.length === 0) {
+        noJobsMsg.classList.remove('hidden');
+        container.innerHTML = '';
+        return;
+      }
+
+      noJobsMsg.classList.add('hidden');
+      container.innerHTML = jobs.map(job => `
+        <div class="ios-card bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+          <div class="flex items-start gap-5">
+            <div class="job-logo"><span>${job.title.charAt(0).toUpperCase()}</span></div>
+            <div class="flex-1">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">${job.title}</h4>
+              <p class="text-gray-700 font-medium mb-3">${job.company}</p>
+              <div class="flex items-center gap-4 text-sm text-gray-600 mb-3">
+                <span><i class="fas fa-map-marker-alt"></i> ${job.location}</span>
+                <span><i class="fas fa-rupee-sign"></i> ${job.salary}</span>
+                <span><i class="fas fa-briefcase"></i> ${job.type}</span>
+              </div>
+              <p class="text-gray-600 text-sm mb-3">${job.description.substring(0, 150)}...</p>
+            </div>
+            <div class="flex flex-col items-end gap-3">
+              <button class="share-button p-2 rounded-full" onclick="shareJob('${job.title}')"><i class="fas fa-share-alt"></i></button>
+              <button class="ios-button bg-blue-600 text-white px-6 py-2 rounded-lg font-medium" onclick="alert('Applied!')">Apply Now</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    document.getElementById('jobForm').onsubmit = async (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitJobBtn');
+      btn.textContent = 'Posting...';
+
+      const jobData = {
+        title: document.getElementById('jobTitle').value,
+        company: document.getElementById('company').value,
+        location: document.getElementById('location').value,
+        type: document.getElementById('jobType').value,
+        salary: document.getElementById('salary').value,
+        description: document.getElementById('description').value
+      };
+
+      const { error } = await supabase.from('jobs').insert([jobData]);
+      if (!error) {
+        showToast('Job posted successfully!');
+        document.getElementById('jobForm').reset();
+        document.getElementById('postJobModal').classList.add('hidden');
+        loadJobs();
+      }
+      btn.textContent = 'Post Job';
+    };
+
+    function showToast(msg) {
+      const t = document.createElement('div'); t.className = 'toast'; t.innerHTML = msg;
+      document.body.appendChild(t); setTimeout(() => t.remove(), 3000);
+    }
+
+    document.getElementById('adminLoginBtn').onclick = () => {
+      if (isLoggedIn) document.getElementById('postJobModal').classList.remove('hidden');
+      else document.getElementById('loginModal').classList.remove('hidden');
+    };
+
+    document.getElementById('loginForm').onsubmit = (e) => {
+      e.preventDefault();
+      if (document.getElementById('username').value === 'admin' && document.getElementById('password').value === 'admin123') {
+        isLoggedIn = true;
+        document.getElementById('loginModal').classList.add('hidden');
+        document.getElementById('postJobModal').classList.remove('hidden');
+        document.getElementById('adminLoginBtn').textContent = 'Post Job';
+      }
+    };
+
+    document.getElementById('logoutBtn').onclick = () => {
+      isLoggedIn = false;
+      document.getElementById('postJobModal').classList.add('hidden');
+      document.getElementById('adminLoginBtn').textContent = 'Admin Login';
+    };
+
+    function shareJob(title) {
+        if (navigator.share) navigator.share({title: title, url: window.location.href});
+    }
+
+    window.onload = loadJobs;
+  </script>
+</body>
+</html>
